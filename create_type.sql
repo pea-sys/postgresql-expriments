@@ -1,1 +1,0 @@
-CREATE TYPE drink_size AS ENUM ('S', 'M', 'L');
