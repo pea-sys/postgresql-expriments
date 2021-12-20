@@ -1,3 +1,3 @@
-# postgresの性整列の動作確認  
+# postgresの生成列の動作確認  
 -- 実験環境:Postgresql 13.2  
 
