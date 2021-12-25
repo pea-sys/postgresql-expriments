@@ -1,0 +1,1 @@
+https://www.postgresql.jp/sites/default/files/2016-12/kataoka_check_your_config.pdf
