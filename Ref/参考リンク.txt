@@ -1,1 +1,2 @@
 https://www.postgresql.jp/sites/default/files/2016-12/kataoka_check_your_config.pdf
+https://www.fujitsu.com/jp/products/software/resources/feature-stories/postgres/article-index/streaming-replication1/
