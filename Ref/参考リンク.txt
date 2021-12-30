@@ -1,2 +1,5 @@
+[参考リンク]  
+ためになったリンク。著者に敬意を禁じえません。  
 https://www.postgresql.jp/sites/default/files/2016-12/kataoka_check_your_config.pdf
 https://www.fujitsu.com/jp/products/software/resources/feature-stories/postgres/article-index/streaming-replication1/
+https://future-architect.github.io/articles/20181019/
