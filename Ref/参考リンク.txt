@@ -3,3 +3,6 @@
 https://www.postgresql.jp/sites/default/files/2016-12/kataoka_check_your_config.pdf
 https://www.fujitsu.com/jp/products/software/resources/feature-stories/postgres/article-index/streaming-replication1/
 https://future-architect.github.io/articles/20181019/
+http://kenpg2.seesaa.net/article/409444727.html
+https://www.ntt-tx.co.jp/column/postgresql_blog/20180320/
+https://www.se-from30.com/aws/postgresql-dblink-postgres_fdw/
