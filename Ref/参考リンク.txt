@@ -7,3 +7,4 @@ http://kenpg2.seesaa.net/article/409444727.html
 https://www.ntt-tx.co.jp/column/postgresql_blog/20180320/
 https://www.se-from30.com/aws/postgresql-dblink-postgres_fdw/
 https://www.sraoss.co.jp/tech-blog/pgsql/pg12-cte/
+https://goodbyegangster.hatenablog.com/entry/2019/05/06/111009
