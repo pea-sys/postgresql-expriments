@@ -1,10 +1,20 @@
 [参考リンク]  
 ためになったリンク。著者に敬意を禁じえません。  
+・PostgreSQLをデフォルト設定のまま使っていませんか？
 https://www.postgresql.jp/sites/default/files/2016-12/kataoka_check_your_config.pdf
+・ストリーミングレプリケーション ～ 仕組み、構成のポイント
 https://www.fujitsu.com/jp/products/software/resources/feature-stories/postgres/article-index/streaming-replication1/
+・PostgreSQLパーティションプルーニングの動作を確認する
 https://future-architect.github.io/articles/20181019/
+・PostgreSQL 9.4 の FROM ROWS FROM … の使い道
 http://kenpg2.seesaa.net/article/409444727.html
+・PostgreSQLの拡張機能組み込み
 https://www.ntt-tx.co.jp/column/postgresql_blog/20180320/
+・PostgreSQL dblink & postgres_fdw
 https://www.se-from30.com/aws/postgresql-dblink-postgres_fdw/
+・PostgreSQL 12の新機能：CTEの高速化
 https://www.sraoss.co.jp/tech-blog/pgsql/pg12-cte/
+・PostgreSQLでテスト用データを作る方法
 https://goodbyegangster.hatenablog.com/entry/2019/05/06/111009
+・timezoneの初期値が9.1→9.2で変更になった話
+https://mallowlabs.hatenablog.com/entry/20140402/postgresql_92_timzone
