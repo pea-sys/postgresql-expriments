@@ -18,3 +18,5 @@ https://www.sraoss.co.jp/tech-blog/pgsql/pg12-cte/
 https://goodbyegangster.hatenablog.com/entry/2019/05/06/111009
 ・timezoneの初期値が9.1→9.2で変更になった話
 https://mallowlabs.hatenablog.com/entry/20140402/postgresql_92_timzone
+・Bitmap Index Scan の後の Bitmap Heap Scan でRecheck処理が行われることの解説
+https://taityo-diary.hatenablog.jp/entry/2018/07/07/071928

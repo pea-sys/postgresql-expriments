@@ -1,0 +1,2 @@
+1.CREATE DATABASE dvdrental;
+2.pg_restore -U postgres -d dvdrental ./dvdrental.tar
