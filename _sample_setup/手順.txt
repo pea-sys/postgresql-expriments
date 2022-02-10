@@ -1,2 +1,4 @@
-1.CREATE DATABASE dvdrental;
-2.pg_restore -U postgres -d dvdrental ./dvdrental.tar
+1.コマンドプロンプト起動
+2.cd tarファイルを配置しているフォルダ
+3.psql -U postgres -p 5432 -d postgres -c "CREATE DATABASE dvdrental TEMPLATE = template0 ENCODING = 'UTF8' LC_COLLATE = 'C' LC_CTYPE = 'C'"
+4.pg_restore -U postgres -d dvdrental ./dvdrental.tar

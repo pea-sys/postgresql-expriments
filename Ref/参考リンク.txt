@@ -20,3 +20,5 @@ https://goodbyegangster.hatenablog.com/entry/2019/05/06/111009
 https://mallowlabs.hatenablog.com/entry/20140402/postgresql_92_timzone
 ・Bitmap Index Scan の後の Bitmap Heap Scan でRecheck処理が行われることの解説
 https://taityo-diary.hatenablog.jp/entry/2018/07/07/071928
+・とあるクエリを2万倍速にした話 -データベースの気持ちになる- 後編
+https://dwango.github.io/articles/mastodon-database-index-2/
