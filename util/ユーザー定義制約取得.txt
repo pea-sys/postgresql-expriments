@@ -1,0 +1,2 @@
+SELECT constraint_name, table_name, constraint_type
+FROM information_schema.table_constraints where table_name NOT LIKE 'pg_%';

@@ -1,0 +1,2 @@
+SELECT tablename, indexname, indexdef
+FROM pg_indexes where tablename NOT LIKE 'pg_%';
