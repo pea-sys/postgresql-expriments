@@ -22,3 +22,5 @@ https://mallowlabs.hatenablog.com/entry/20140402/postgresql_92_timzone
 https://taityo-diary.hatenablog.jp/entry/2018/07/07/071928
 ・とあるクエリを2万倍速にした話 -データベースの気持ちになる- 後編
 https://dwango.github.io/articles/mastodon-database-index-2/
+・日本語でソート
+https://blog.ohgaki.net/postgresql-10-icu-locale-collation-enables-natural-japanese-sorting
