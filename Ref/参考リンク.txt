@@ -24,3 +24,7 @@ https://taityo-diary.hatenablog.jp/entry/2018/07/07/071928
 https://dwango.github.io/articles/mastodon-database-index-2/
 ・日本語でソート
 https://blog.ohgaki.net/postgresql-10-icu-locale-collation-enables-natural-japanese-sorting
+・DB別アーキテクチャの違い
+https://www.pgecons.org/wp-content/uploads/PGECons/2015/WG2/14_Appendix_01_Architecture.pdf
+・行ロック時に出るトランザクションIDロックについて
+https://masahikosawada.github.io//2018/09/04/Row-locking-and-locking-on-transactionid/
