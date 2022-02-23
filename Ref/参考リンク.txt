@@ -1,5 +1,7 @@
 [参考リンク]  
-ためになったリンク。著者に敬意を禁じえません。  
+ためになったリンク。著者に敬意を禁じえません。 
+・PGECons 活動報告 
+https://pgecons-sec-tech.github.io/tech-report/
 ・PostgreSQLをデフォルト設定のまま使っていませんか？
 https://www.postgresql.jp/sites/default/files/2016-12/kataoka_check_your_config.pdf
 ・ストリーミングレプリケーション ～ 仕組み、構成のポイント
