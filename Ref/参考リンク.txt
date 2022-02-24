@@ -1,5 +1,8 @@
 [参考リンク]  
 ためになったリンク。著者に敬意を禁じえません。 
+・windowsでpostgresコンパイル
+https://qiita.com/t-kataym/items/e13c268f371fb87cb118
+https://www.postgresql.jp/document/13/html/install-windows.html
 ・PGECons 活動報告 
 https://pgecons-sec-tech.github.io/tech-report/
 ・PostgreSQLをデフォルト設定のまま使っていませんか？
