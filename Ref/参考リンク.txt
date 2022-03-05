@@ -1,5 +1,7 @@
 [参考リンク]  
 ためになったリンク。著者に敬意を禁じえません。 
+・VACUUM
+https://www.slideshare.net/masahikosawada98/inside-vacuum
 ・windowsでpostgresコンパイル
 https://qiita.com/t-kataym/items/e13c268f371fb87cb118
 https://www.postgresql.jp/document/13/html/install-windows.html
