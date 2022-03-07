@@ -1,5 +1,7 @@
 [参考リンク]  
 ためになったリンク。著者に敬意を禁じえません。 
+・postgres.conf解説
+https://github.com/jberkus/annotated.conf/blob/master/annotated.csv
 ・VACUUM
 https://www.slideshare.net/masahikosawada98/inside-vacuum
 ・windowsでpostgresコンパイル
