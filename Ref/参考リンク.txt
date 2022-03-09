@@ -37,3 +37,7 @@ https://blog.ohgaki.net/postgresql-10-icu-locale-collation-enables-natural-japan
 https://www.pgecons.org/wp-content/uploads/PGECons/2015/WG2/14_Appendix_01_Architecture.pdf
 ・行ロック時に出るトランザクションIDロックについて
 https://masahikosawada.github.io//2018/09/04/Row-locking-and-locking-on-transactionid/
+・toastメカニズム
+https://kaigai.hatenablog.com/entry/20090623/1245760737
+・toastサイズ検証
+https://hakibenita.com/sql-medium-text-performance

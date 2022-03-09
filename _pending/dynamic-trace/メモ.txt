@@ -1,0 +1,1 @@
+https://www.postgresql.jp/document/13/html/dynamic-trace.html
