@@ -40,4 +40,6 @@ https://masahikosawada.github.io//2018/09/04/Row-locking-and-locking-on-transact
 ・toastメカニズム
 https://kaigai.hatenablog.com/entry/20090623/1245760737
 ・toastサイズ検証
-https://hakibenita.com/sql-medium-text-performance
+https://hakibenita.com/sql-medium-text-performance  
+・PostgreSQLの関数属性を知ろう
+https://www.slideshare.net/kasaharatt/postgresql-87399387

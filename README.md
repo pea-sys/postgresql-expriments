@@ -13,5 +13,13 @@ https://www.postgresql.jp/document/13/html/
 ・第32章 リグレッションテスト  
 ・第33章 libpq — C ライブラリ  
 ・第34章 ラージオブジェクト
-・第35章 ECPG — C言語による埋め込みSQL
+・第35章 ECPG — C言語による埋め込みSQL    
+・第37章 SQLの拡張 
 
+[実験環境]
+OS:Windows10
+DB:PostgreSQL14  
+
+[設定]
+postgresql.conf  
+lc_message = 'en_US' --ログ文字化け対策
