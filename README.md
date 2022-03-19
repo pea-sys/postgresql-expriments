@@ -15,6 +15,11 @@ https://www.postgresql.jp/document/13/html/
 ・第34章 ラージオブジェクト
 ・第35章 ECPG — C言語による埋め込みSQL    
 ・第37章 SQLの拡張 
+・第43章 PL/Tcl — Tcl手続き言語  
+・第44章 PL/Perl — Perl手続き言語  
+・第45章 PL/Python — Python手続き言語  
+・第46章 サーバプログラミングインタフェース
+
 
 [実験環境]
 OS:Windows10
