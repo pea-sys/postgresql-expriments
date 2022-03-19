@@ -1,0 +1,39 @@
+-- 計画のキャッシュ項目については例題が残念ながら理解できなかった
+-- nowはセッション開始時刻になるのだからキャッシュ有無は影響しないのでは？と思い、試しましたが想定通りの動作でした
+--"func1"	"2022-03-19 10:28:29.003899"
+--"func2"	"2022-03-19 10:28:29.003899"
+--"func1"	"2022-03-19 10:28:29.003899"
+--"func2"	"2022-03-19 10:28:29.003899"
+drop table if exists logtable;
+create table logtable (log text, write_timestamp timestamp);
+CREATE OR REPLACE FUNCTION logfunc1(logtxt text) RETURNS void AS $$
+    BEGIN
+        INSERT INTO logtable VALUES (logtxt, 'now');
+    END;
+$$ LANGUAGE plpgsql;
+
+CREATE OR REPLACE FUNCTION logfunc2(logtxt text) RETURNS void AS $$
+    DECLARE
+        curtime timestamp;
+    BEGIN
+        curtime := 'now';
+        INSERT INTO logtable VALUES (logtxt, curtime);
+    END;
+$$ LANGUAGE plpgsql;
+
+DO $$
+BEGIN
+	perform logfunc1('func1');
+	perform logfunc2('func2');
+END $$;
+
+
+select pg_sleep(5);
+
+DO $$
+BEGIN
+	perform logfunc1('func1');
+	perform logfunc2('func2');
+END $$;
+
+table logtable;
