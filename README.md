@@ -19,12 +19,12 @@ https://www.postgresql.jp/document/13/html/
 ・第44章 PL/Perl — Perl手続き言語  
 ・第45章 PL/Python — Python手続き言語  
 ・第46章 サーバプログラミングインタフェース
-・VI. リファレンス
+・VI. リファレンス  
 ※その他、重複する内容や内部実装のカスタム方法等を飛ばしています
 
 
 [実験環境]
-OS:Windows10
+OS:Windows10  
 DB:PostgreSQL14  
 
 [設定]
