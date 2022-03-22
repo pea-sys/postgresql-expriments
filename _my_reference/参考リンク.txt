@@ -45,3 +45,5 @@ https://hakibenita.com/sql-medium-text-performance
 https://www.slideshare.net/kasaharatt/postgresql-87399387
 ・【PostgreSQL】初回クエリーが遅い
 https://qiita.com/yaju/items/e0f8f56e4d8d04ea22b6
+・pg_prewarmと複合indexを用いてPostgreSQLをチューニングし、劇的な改善を実現した話
+https://www.forcia.com/blog/001178.html
