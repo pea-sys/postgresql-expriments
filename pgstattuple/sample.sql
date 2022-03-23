@@ -28,3 +28,38 @@ sample=# select pgstatindex('pgbench_accounts_aid_idx');
 -------------------------------------
  (4,2,6758400,290,4,820,0,0,90.05,0)
 (1 行)
+
+sample=# select pg_relpages('pgbench_accounts');
+ pg_relpages
+-------------
+        4919
+(1 行)
+
+sample=# select pgstattuple_approx('pgbench_accounts');
+                               pgstattuple_approx
+--------------------------------------------------------------------------------
+ (40296448,0,300000,39816448,98.80882801382394,0,0,0,480000,1.1911719861760521)
+(1 行)
+
+sample=#  CREATE INDEX aid_hash_index ON pgbench_accounts USING hash(aid);
+CREATE INDEX
+sample=# select pgstathashindex('aid_hash_index');
+              pgstathashindex
+-------------------------------------------
+ (4,1024,0,1,0,300000,0,28.12346663395486)
+(1 行)
+
+sample=# select 'kaiueo' <->> 'aiueo';
+ ?column?
+-----------
+ 0.3333333
+
+sample=# select 'kaiueo' <<<-> 'kakikukeko';
+ ?column?
+----------
+    0.875
+
+sample=# select 'kaiueo' <->>> 'kakikukeko';
+ ?column?
+----------
+    0.875
