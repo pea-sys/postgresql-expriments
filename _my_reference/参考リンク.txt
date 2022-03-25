@@ -47,3 +47,5 @@ https://www.slideshare.net/kasaharatt/postgresql-87399387
 https://qiita.com/yaju/items/e0f8f56e4d8d04ea22b6
 ・pg_prewarmと複合indexを用いてPostgreSQLをチューニングし、劇的な改善を実現した話
 https://www.forcia.com/blog/001178.html
+・PostgreSQL 9.6 の postgres_fdw について検証してみた
+https://tech-lab.sios.jp/archives/8641
