@@ -1,0 +1,40 @@
+sample=# INSERT INTO image (title,raster)
+sample-#     VALUES ('test image', lo_import('C:\Program Files\PostgreSQL\14\data\lo.csv'));
+INSERT 0 1
+sample=# delete from image;
+DELETE 1
+sample=# select count(*) from pg_largeobject;
+ count
+-------
+     1
+(1 行)
+
+
+sample=# \q
+
+C:\>vacuumlo -U postgres -n sample
+Connected to database "sample"
+Test run: no large objects will be removed!
+Checking raster in public.image
+Would remove 1 large objects from database "sample".
+
+C:\>vacuumlo -U postgres -n -v sample
+Connected to database "sample"
+Test run: no large objects will be removed!
+Checking raster in public.image
+Would remove 1 large objects from database "sample".
+
+C:\>vacuumlo -U postgres -v sample
+Connected to database "sample"
+Checking raster in public.image
+Successfully removed 1 large objects from database "sample".
+
+C:\>psql -U postgres sample
+psql (14.2)
+"help"でヘルプを表示します。
+
+sample=# select count(*) from pg_largeobject;
+ count
+-------
+     0
+(1 行)
