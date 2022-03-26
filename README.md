@@ -25,7 +25,7 @@ https://www.postgresql.jp/document/13/html/
 
 [実験環境]  
 OS:Windows10  
-DB:PostgreSQL14  
+DB:PostgreSQL13  
 
 [設定]
 postgresql.conf  
