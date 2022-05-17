@@ -147,4 +147,38 @@ psql -U postgres -d dvdrental -c "SELECT (relpages * 8192) as byte FROM pg_class
 (1 行)
 ```
 
+- 11.次に組み込みトリガ関数 suppress_redundant_updates_trigger を試します。
+
+```psql
+CREATE TRIGGER z_min_update
+BEFORE UPDATE ON rental
+FOR EACH ROW EXECUTE PROCEDURE suppress_redundant_updates_trigger();
+```
+
+- 12.更新対象ありの UPDATE を行います。
+
+```psql
+DO $$
+DECLARE
+num constant int := 10000;
+BEGIN
+  FOR a IN 1..num LOOP
+     UPDATE rental SET staff_id = 1 WHERE rental_id = 1;
+  END LOOP;
+END$$;
+```
+
+- 13.更新対象のテーブルサイズを取得します。 サイズは増えていません。更新対象があっても、データに差異がなければ UPDATE しないようです。
+
+```psql
+psql -U postgres -d dvdrental -c "analyze;"
+
+psql -U postgres -d dvdrental -c "SELECT (relpages * 8192) as byte FROM pg_class where relname ='rental';"
+  byte
+---------
+ 1335296
+(1 行)
+```
+
 以上
+
