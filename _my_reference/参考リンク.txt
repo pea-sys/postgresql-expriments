@@ -1,5 +1,7 @@
 [参考リンク]  
 ためになったリンク。著者に敬意を禁じえません。 
+・設定の生成ツール
+https://pgtune.leopard.in.ua/#/
 ・postgres.conf解説
 https://github.com/jberkus/annotated.conf/blob/master/annotated.csv
 ・VACUUM
