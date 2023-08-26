@@ -51,3 +51,5 @@ https://qiita.com/yaju/items/e0f8f56e4d8d04ea22b6
 https://www.forcia.com/blog/001178.html
 ・PostgreSQL 9.6 の postgres_fdw について検証してみた
 https://tech-lab.sios.jp/archives/8641
+* リカバリからBDRまでを支える PostgreSQL 内部技術
+https://edbjapan.com/el/BDR_Suzuki/#/lessons/tR8Y5jkWzvl17pfstSAxeW2NMmM1HGW2
