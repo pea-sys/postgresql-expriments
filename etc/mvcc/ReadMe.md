@@ -10,7 +10,7 @@ https://edbjapan.com/postgresql-technical-webinar-announcement/
 
 スクリプトの提供元  
 https://momjian.us/main/  
-ウェビナーの本流
+ウェビナーの本流  
 https://momjian.us/main/writings/pgsql/mvcc.pdf
 
 ---
