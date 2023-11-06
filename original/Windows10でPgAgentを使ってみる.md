@@ -2,7 +2,7 @@
 
 pgAgentはPostgres データベース用のジョブスケジューリングエージェントです。
 ### [インストール]
-ApplicationStackBuilderを使用してインストールします
+ApplicationStackBuilderを使用してインストールします  
 ![Install](https://github.com/pea-sys/postgresql-expriments/assets/49807271/8987f2d4-89e6-4fe0-af1b-7fa8929067b5)
 * DBにアクセスするユーザーの入力
 
