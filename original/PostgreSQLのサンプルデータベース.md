@@ -39,7 +39,7 @@ psql -U postgres -f usda.sql usda
 
 -----------------
 ## ■dvdrental 
-DVD連らるショップのDB  
+DVDレンタルショップのDB  
 後述のpagillaをシンプルにしたもの
 
 ### ソース
@@ -59,7 +59,7 @@ pg_restore -h localhost -p 5432 -U postgres -d dvdrental dvdrental.tar
 -----------------
 ## ■pagilla 
 DVDレンタルショップのDB  
-https://www.postgresqltutorial.com/postgresql-getting-started/postgresql-sample-database/
+
 
 ### ソース
 https://www.postgresql.org/ftp/projects/pgFoundry/dbsamples/pagila/pagila/
@@ -164,7 +164,7 @@ CREATE UNIQUE INDEX time_hash_idx ON public.transactions (time, hash);
 
 ------------------
 ## ■pgbench
-ベンチーマークのために用意されているデータ  
+ベンチマークのために用意されているデータ  
 約10万行(ベンチを動かすことで調整可)
 
 ### リストア
