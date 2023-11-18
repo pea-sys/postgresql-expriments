@@ -7,7 +7,8 @@
 データ量は五千行程度  
 
 ### ソース
-https://www.postgresql.org/ftp/projects/pgFoundry/dbsamples/
+[https://www.postgresql.org/ftp/projects/pgFoundry/dbsamples/](https://www.postgresql.org/ftp/projects/pgFoundry/dbsamples/world/)
+
 ### リストア
 
 ```sql
