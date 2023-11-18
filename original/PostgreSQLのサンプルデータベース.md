@@ -160,3 +160,16 @@ CREATE UNIQUE INDEX time_hash_idx ON public.transactions (time, hash);
 
 ### ER図
 ![Untitled](https://github.com/pea-sys/postgres-datasets/assets/49807271/d841f157-c2be-48b4-b6d7-6023bafcc73c)
+
+------------------
+## ■pgbench
+ベンチーマークのために用意されているデータ  
+約10万行(ベンチを動かすことで調整可)
+
+### リストア
+```
+createdb -U postgres bench
+pgbench -U postgres -i bench
+```
+### ER図
+![1](https://github.com/pea-sys/postgresql-expriments/assets/49807271/015c9ab7-bca7-4f7b-8ff9-db1dca8d668d)
