@@ -40,6 +40,7 @@ tps = 1804.942301 (without initial connection time)
 ```
 
 ### UNLOGGEDテーブル
+ここではALTER TABLEでUNLOGGEDにしていますが、pgbenchのパラメータに--unlogged-tablesオプションがあったので、そちらを使うべきでした。
 ```sql
 pgbench -U postgres -i sample
 psql -U postgres -d sample
