@@ -32,5 +32,5 @@ DB:PostgreSQL13
 postgresql.conf  
 lc_message = 'en_US' --ログ文字化け対策
 
-[playgroud]  
+[playground]  
 https://www.crunchydata.com/developers/playground
