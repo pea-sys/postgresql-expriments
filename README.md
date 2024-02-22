@@ -23,6 +23,7 @@ https://www.postgresql.jp/document/13/html/
 ※その他、重複する内容や内部実装のカスタム方法等を飛ばしています
 
 
+
 [実験環境]  
 OS:Windows10  
 DB:PostgreSQL13  
@@ -30,3 +31,6 @@ DB:PostgreSQL13
 [設定]
 postgresql.conf  
 lc_message = 'en_US' --ログ文字化け対策
+
+[playgroud]  
+https://www.crunchydata.com/developers/playground
