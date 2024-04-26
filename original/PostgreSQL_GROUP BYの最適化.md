@@ -1,6 +1,6 @@
 # GROUP BY の最適化
 
-次ｍのページにある GROUP BY の小さな最適化を試します
+次のページにある GROUP BY の小さな最適化を試します
 
 https://www.cybertec-postgresql.com/en/speeding-up-group-by-in-postgresql/
 
