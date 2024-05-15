@@ -1,0 +1,1381 @@
+SET
+CREATE TABLE
+INSERT 0 1000000
+VACUUM
+            substr             | octet_length | pg_column_size | pg_column_size 
+-------------------------------+--------------+----------------+----------------
+ oaVZ3pJPDLlrJ0oCqEDqUUyGZkHE2 |         2004 |           2008 |           2032
+(1 行)
+
+         ?column?         
+--------------------------
+ text_inline_uncompressed
+(1 行)
+
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on text_inline_uncompressed  (cost=0.00..260000.00 rows=1000000 width=2008) (actual time=0.004..683.590 rows=1000000 loops=1)
+ Planning Time: 0.017 ms
+ Execution Time: 725.014 ms
+(3 行)
+
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on text_inline_uncompressed  (cost=0.00..260000.00 rows=1000000 width=2008) (actual time=0.005..683.738 rows=1000000 loops=1)
+ Planning Time: 0.029 ms
+ Execution Time: 724.883 ms
+(3 行)
+
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on text_inline_uncompressed  (cost=0.00..260000.00 rows=1000000 width=2008) (actual time=0.005..667.837 rows=1000000 loops=1)
+ Planning Time: 0.029 ms
+ Execution Time: 708.304 ms
+(3 行)
+
+                                                                QUERY PLAN                                                                 
+-------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=262500.00..262500.01 rows=1 width=8) (actual time=743.149..743.150 rows=1 loops=1)
+   ->  Seq Scan on text_inline_uncompressed  (cost=0.00..260000.00 rows=1000000 width=0) (actual time=0.012..675.492 rows=1000000 loops=1)
+ Planning Time: 0.051 ms
+ JIT:
+   Functions: 2
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.133 ms, Inlining 0.000 ms, Optimization 0.107 ms, Emission 2.343 ms, Total 2.583 ms
+ Execution Time: 763.651 ms
+(8 行)
+
+                                                                QUERY PLAN                                                                 
+-------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=262500.00..262500.01 rows=1 width=8) (actual time=737.585..737.586 rows=1 loops=1)
+   ->  Seq Scan on text_inline_uncompressed  (cost=0.00..260000.00 rows=1000000 width=0) (actual time=0.787..668.250 rows=1000000 loops=1)
+ Planning Time: 0.038 ms
+ JIT:
+   Functions: 2
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.154 ms, Inlining 0.000 ms, Optimization 0.105 ms, Emission 1.459 ms, Total 1.718 ms
+ Execution Time: 737.791 ms
+(8 行)
+
+                                                                QUERY PLAN                                                                 
+-------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=262500.00..262500.01 rows=1 width=8) (actual time=735.246..735.247 rows=1 loops=1)
+   ->  Seq Scan on text_inline_uncompressed  (cost=0.00..260000.00 rows=1000000 width=0) (actual time=1.297..666.063 rows=1000000 loops=1)
+ Planning Time: 0.038 ms
+ JIT:
+   Functions: 2
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.150 ms, Inlining 0.000 ms, Optimization 0.107 ms, Emission 1.477 ms, Total 1.734 ms
+ Execution Time: 735.453 ms
+(8 行)
+
+                                                                QUERY PLAN                                                                 
+-------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=262500.00..262500.01 rows=1 width=8) (actual time=777.681..777.682 rows=1 loops=1)
+   ->  Seq Scan on text_inline_uncompressed  (cost=0.00..260000.00 rows=1000000 width=0) (actual time=2.449..713.041 rows=1000000 loops=1)
+         Filter: (v IS NOT NULL)
+ Planning Time: 0.048 ms
+ JIT:
+   Functions: 4
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.230 ms, Inlining 0.000 ms, Optimization 0.144 ms, Emission 2.256 ms, Total 2.630 ms
+ Execution Time: 777.967 ms
+(9 行)
+
+                                                                QUERY PLAN                                                                 
+-------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=262500.00..262500.01 rows=1 width=8) (actual time=768.417..768.418 rows=1 loops=1)
+   ->  Seq Scan on text_inline_uncompressed  (cost=0.00..260000.00 rows=1000000 width=0) (actual time=2.349..704.306 rows=1000000 loops=1)
+         Filter: (v IS NOT NULL)
+ Planning Time: 0.043 ms
+ JIT:
+   Functions: 4
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.247 ms, Inlining 0.000 ms, Optimization 0.134 ms, Emission 2.221 ms, Total 2.602 ms
+ Execution Time: 768.722 ms
+(9 行)
+
+                                                                QUERY PLAN                                                                 
+-------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=262500.00..262500.01 rows=1 width=8) (actual time=778.995..778.997 rows=1 loops=1)
+   ->  Seq Scan on text_inline_uncompressed  (cost=0.00..260000.00 rows=1000000 width=0) (actual time=2.375..714.156 rows=1000000 loops=1)
+         Filter: (v IS NOT NULL)
+ Planning Time: 0.045 ms
+ JIT:
+   Functions: 4
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.251 ms, Inlining 0.000 ms, Optimization 0.144 ms, Emission 2.229 ms, Total 2.624 ms
+ Execution Time: 779.314 ms
+(9 行)
+
+                                                                QUERY PLAN                                                                
+------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=265833.33..265833.34 rows=1 width=8) (actual time=804.011..804.012 rows=1 loops=1)
+   ->  Seq Scan on text_inline_uncompressed  (cost=0.00..265000.00 rows=333333 width=0) (actual time=5.339..741.573 rows=1000000 loops=1)
+         Filter: (octet_length(v) > 100)
+ Planning Time: 0.066 ms
+ JIT:
+   Functions: 4
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.430 ms, Inlining 0.000 ms, Optimization 0.219 ms, Emission 3.608 ms, Total 4.256 ms
+ Execution Time: 804.508 ms
+(9 行)
+
+                                                                QUERY PLAN                                                                
+------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=265833.33..265833.34 rows=1 width=8) (actual time=790.671..790.672 rows=1 loops=1)
+   ->  Seq Scan on text_inline_uncompressed  (cost=0.00..265000.00 rows=333333 width=0) (actual time=2.653..727.949 rows=1000000 loops=1)
+         Filter: (octet_length(v) > 100)
+ Planning Time: 0.043 ms
+ JIT:
+   Functions: 4
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.368 ms, Inlining 0.000 ms, Optimization 0.158 ms, Emission 2.497 ms, Total 3.023 ms
+ Execution Time: 791.103 ms
+(9 行)
+
+                                                                QUERY PLAN                                                                
+------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=265833.33..265833.34 rows=1 width=8) (actual time=791.820..791.821 rows=1 loops=1)
+   ->  Seq Scan on text_inline_uncompressed  (cost=0.00..265000.00 rows=333333 width=0) (actual time=2.598..729.571 rows=1000000 loops=1)
+         Filter: (octet_length(v) > 100)
+ Planning Time: 0.041 ms
+ JIT:
+   Functions: 4
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.330 ms, Inlining 0.000 ms, Optimization 0.151 ms, Emission 2.446 ms, Total 2.927 ms
+ Execution Time: 792.210 ms
+(9 行)
+
+                                                              QUERY PLAN                                                              
+--------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=265833.33..265833.34 rows=1 width=8) (actual time=685.961..685.962 rows=1 loops=1)
+   ->  Seq Scan on text_inline_uncompressed  (cost=0.00..265000.00 rows=333333 width=0) (actual time=685.930..685.931 rows=0 loops=1)
+         Filter: (octet_length(v) > 10000)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.042 ms
+ JIT:
+   Functions: 4
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.366 ms, Inlining 0.000 ms, Optimization 0.164 ms, Emission 2.441 ms, Total 2.971 ms
+ Execution Time: 686.387 ms
+(10 行)
+
+                                                              QUERY PLAN                                                              
+--------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=265833.33..265833.34 rows=1 width=8) (actual time=683.923..683.924 rows=1 loops=1)
+   ->  Seq Scan on text_inline_uncompressed  (cost=0.00..265000.00 rows=333333 width=0) (actual time=683.891..683.891 rows=0 loops=1)
+         Filter: (octet_length(v) > 10000)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.041 ms
+ JIT:
+   Functions: 4
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.335 ms, Inlining 0.000 ms, Optimization 0.168 ms, Emission 2.461 ms, Total 2.965 ms
+ Execution Time: 684.315 ms
+(10 行)
+
+                                                              QUERY PLAN                                                              
+--------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=265833.33..265833.34 rows=1 width=8) (actual time=686.229..686.230 rows=1 loops=1)
+   ->  Seq Scan on text_inline_uncompressed  (cost=0.00..265000.00 rows=333333 width=0) (actual time=686.197..686.197 rows=0 loops=1)
+         Filter: (octet_length(v) > 10000)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.042 ms
+ JIT:
+   Functions: 4
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.337 ms, Inlining 0.000 ms, Optimization 0.178 ms, Emission 2.616 ms, Total 3.131 ms
+ Execution Time: 686.620 ms
+(10 行)
+
+                                                             QUERY PLAN                                                              
+-------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=262500.25..262500.26 rows=1 width=8) (actual time=4605.395..4605.396 rows=1 loops=1)
+   ->  Seq Scan on text_inline_uncompressed  (cost=0.00..262500.00 rows=100 width=0) (actual time=4605.364..4605.364 rows=0 loops=1)
+         Filter: (v ~~ '%notmatch%'::text)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.064 ms
+ JIT:
+   Functions: 4
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.336 ms, Inlining 0.000 ms, Optimization 0.229 ms, Emission 2.940 ms, Total 3.505 ms
+ Execution Time: 4605.790 ms
+(10 行)
+
+                                                             QUERY PLAN                                                              
+-------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=262500.25..262500.26 rows=1 width=8) (actual time=4603.983..4603.984 rows=1 loops=1)
+   ->  Seq Scan on text_inline_uncompressed  (cost=0.00..262500.00 rows=100 width=0) (actual time=4603.951..4603.951 rows=0 loops=1)
+         Filter: (v ~~ '%notmatch%'::text)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.052 ms
+ JIT:
+   Functions: 4
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.300 ms, Inlining 0.000 ms, Optimization 0.162 ms, Emission 2.381 ms, Total 2.842 ms
+ Execution Time: 4604.342 ms
+(10 行)
+
+                                                             QUERY PLAN                                                              
+-------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=262500.25..262500.26 rows=1 width=8) (actual time=4606.395..4606.396 rows=1 loops=1)
+   ->  Seq Scan on text_inline_uncompressed  (cost=0.00..262500.00 rows=100 width=0) (actual time=4606.363..4606.363 rows=0 loops=1)
+         Filter: (v ~~ '%notmatch%'::text)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.043 ms
+ JIT:
+   Functions: 4
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.331 ms, Inlining 0.000 ms, Optimization 0.179 ms, Emission 2.406 ms, Total 2.916 ms
+ Execution Time: 4606.787 ms
+(10 行)
+
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=262500.25..262500.26 rows=1 width=8) (actual time=4480.996..4480.997 rows=1 loops=1)
+   ->  Seq Scan on text_inline_uncompressed  (cost=0.00..262500.00 rows=100 width=0) (actual time=3.805..4417.838 rows=1000000 loops=1)
+         Filter: (v ~~ '%YRdCjpd1%'::text)
+ Planning Time: 0.055 ms
+ JIT:
+   Functions: 4
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.297 ms, Inlining 0.000 ms, Optimization 0.163 ms, Emission 2.375 ms, Total 2.835 ms
+ Execution Time: 4481.352 ms
+(9 行)
+
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=262500.25..262500.26 rows=1 width=8) (actual time=4478.430..4478.431 rows=1 loops=1)
+   ->  Seq Scan on text_inline_uncompressed  (cost=0.00..262500.00 rows=100 width=0) (actual time=3.819..4415.358 rows=1000000 loops=1)
+         Filter: (v ~~ '%YRdCjpd1%'::text)
+ Planning Time: 0.050 ms
+ JIT:
+   Functions: 4
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.257 ms, Inlining 0.000 ms, Optimization 0.182 ms, Emission 2.348 ms, Total 2.786 ms
+ Execution Time: 4478.744 ms
+(9 行)
+
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=262500.25..262500.26 rows=1 width=8) (actual time=4468.327..4468.328 rows=1 loops=1)
+   ->  Seq Scan on text_inline_uncompressed  (cost=0.00..262500.00 rows=100 width=0) (actual time=3.808..4405.336 rows=1000000 loops=1)
+         Filter: (v ~~ '%YRdCjpd1%'::text)
+ Planning Time: 0.046 ms
+ JIT:
+   Functions: 4
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.249 ms, Inlining 0.000 ms, Optimization 0.165 ms, Emission 2.342 ms, Total 2.757 ms
+ Execution Time: 4468.639 ms
+(9 行)
+
+                                                              QUERY PLAN                                                               
+---------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=262500.25..262500.26 rows=1 width=8) (actual time=20781.119..20781.120 rows=1 loops=1)
+   ->  Seq Scan on text_inline_uncompressed  (cost=0.00..262500.00 rows=100 width=0) (actual time=20781.097..20781.098 rows=0 loops=1)
+         Filter: (v ~ 'notmatch'::text)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.083 ms
+ JIT:
+   Functions: 4
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.243 ms, Inlining 0.000 ms, Optimization 0.138 ms, Emission 2.346 ms, Total 2.727 ms
+ Execution Time: 20781.420 ms
+(10 行)
+
+                                                              QUERY PLAN                                                               
+---------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=262500.25..262500.26 rows=1 width=8) (actual time=20748.149..20748.150 rows=1 loops=1)
+   ->  Seq Scan on text_inline_uncompressed  (cost=0.00..262500.00 rows=100 width=0) (actual time=20748.127..20748.127 rows=0 loops=1)
+         Filter: (v ~ 'notmatch'::text)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.057 ms
+ JIT:
+   Functions: 4
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.294 ms, Inlining 0.000 ms, Optimization 0.167 ms, Emission 2.332 ms, Total 2.793 ms
+ Execution Time: 20748.506 ms
+(10 行)
+
+                                                              QUERY PLAN                                                               
+---------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=262500.25..262500.26 rows=1 width=8) (actual time=20738.223..20738.224 rows=1 loops=1)
+   ->  Seq Scan on text_inline_uncompressed  (cost=0.00..262500.00 rows=100 width=0) (actual time=20738.202..20738.202 rows=0 loops=1)
+         Filter: (v ~ 'notmatch'::text)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.064 ms
+ JIT:
+   Functions: 4
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.335 ms, Inlining 0.000 ms, Optimization 0.172 ms, Emission 2.420 ms, Total 2.927 ms
+ Execution Time: 20738.620 ms
+(10 行)
+
+                                                               QUERY PLAN                                                                
+-----------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=262500.25..262500.26 rows=1 width=8) (actual time=21400.873..21400.874 rows=1 loops=1)
+   ->  Seq Scan on text_inline_uncompressed  (cost=0.00..262500.00 rows=100 width=0) (actual time=3.826..21328.547 rows=1000000 loops=1)
+         Filter: (v ~ 'YRdCjpd1'::text)
+ Planning Time: 0.083 ms
+ JIT:
+   Functions: 4
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.294 ms, Inlining 0.000 ms, Optimization 0.167 ms, Emission 2.347 ms, Total 2.808 ms
+ Execution Time: 21401.225 ms
+(9 行)
+
+                                                               QUERY PLAN                                                                
+-----------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=262500.25..262500.26 rows=1 width=8) (actual time=21429.449..21429.450 rows=1 loops=1)
+   ->  Seq Scan on text_inline_uncompressed  (cost=0.00..262500.00 rows=100 width=0) (actual time=3.947..21362.368 rows=1000000 loops=1)
+         Filter: (v ~ 'YRdCjpd1'::text)
+ Planning Time: 0.057 ms
+ JIT:
+   Functions: 4
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.303 ms, Inlining 0.000 ms, Optimization 0.176 ms, Emission 2.485 ms, Total 2.964 ms
+ Execution Time: 21429.812 ms
+(9 行)
+
+                                                               QUERY PLAN                                                                
+-----------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=262500.25..262500.26 rows=1 width=8) (actual time=21399.808..21399.809 rows=1 loops=1)
+   ->  Seq Scan on text_inline_uncompressed  (cost=0.00..262500.00 rows=100 width=0) (actual time=3.630..21331.135 rows=1000000 loops=1)
+         Filter: (v ~ 'YRdCjpd1'::text)
+ Planning Time: 0.056 ms
+ JIT:
+   Functions: 4
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.305 ms, Inlining 0.000 ms, Optimization 0.162 ms, Emission 2.349 ms, Total 2.816 ms
+ Execution Time: 21400.179 ms
+(9 行)
+
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=265833.33..265833.34 rows=1 width=8) (actual time=2248.858..2248.859 rows=1 loops=1)
+   ->  Seq Scan on text_inline_uncompressed  (cost=0.00..265000.00 rows=333333 width=0) (actual time=2248.827..2248.827 rows=0 loops=1)
+         Filter: (POSITION(('notmatch'::text) IN (v)) > 0)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.043 ms
+ JIT:
+   Functions: 4
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.283 ms, Inlining 0.000 ms, Optimization 0.166 ms, Emission 2.782 ms, Total 3.232 ms
+ Execution Time: 2249.199 ms
+(10 行)
+
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=265833.33..265833.34 rows=1 width=8) (actual time=2243.646..2243.647 rows=1 loops=1)
+   ->  Seq Scan on text_inline_uncompressed  (cost=0.00..265000.00 rows=333333 width=0) (actual time=2243.616..2243.617 rows=0 loops=1)
+         Filter: (POSITION(('notmatch'::text) IN (v)) > 0)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.045 ms
+ JIT:
+   Functions: 4
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.288 ms, Inlining 0.000 ms, Optimization 0.161 ms, Emission 2.559 ms, Total 3.009 ms
+ Execution Time: 2243.992 ms
+(10 行)
+
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=265833.33..265833.34 rows=1 width=8) (actual time=2248.461..2248.462 rows=1 loops=1)
+   ->  Seq Scan on text_inline_uncompressed  (cost=0.00..265000.00 rows=333333 width=0) (actual time=2248.428..2248.428 rows=0 loops=1)
+         Filter: (POSITION(('notmatch'::text) IN (v)) > 0)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.043 ms
+ JIT:
+   Functions: 4
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.264 ms, Inlining 0.000 ms, Optimization 0.142 ms, Emission 2.469 ms, Total 2.876 ms
+ Execution Time: 2248.784 ms
+(10 行)
+
+                                                                QUERY PLAN                                                                 
+-------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=265833.33..265833.34 rows=1 width=8) (actual time=9230.382..9230.383 rows=1 loops=1)
+   ->  Seq Scan on text_inline_uncompressed  (cost=0.00..265000.00 rows=333333 width=0) (actual time=2.591..9164.110 rows=1000000 loops=1)
+         Filter: (POSITION(('YRdCjpd1'::text) IN (v)) > 0)
+ Planning Time: 0.051 ms
+ JIT:
+   Functions: 4
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.366 ms, Inlining 0.000 ms, Optimization 0.157 ms, Emission 2.424 ms, Total 2.946 ms
+ Execution Time: 9230.809 ms
+(9 行)
+
+                                                                QUERY PLAN                                                                 
+-------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=265833.33..265833.34 rows=1 width=8) (actual time=9207.744..9207.745 rows=1 loops=1)
+   ->  Seq Scan on text_inline_uncompressed  (cost=0.00..265000.00 rows=333333 width=0) (actual time=3.906..9141.098 rows=1000000 loops=1)
+         Filter: (POSITION(('YRdCjpd1'::text) IN (v)) > 0)
+ Planning Time: 0.043 ms
+ JIT:
+   Functions: 4
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.376 ms, Inlining 0.000 ms, Optimization 0.169 ms, Emission 2.458 ms, Total 3.003 ms
+ Execution Time: 9208.186 ms
+(9 行)
+
+                                                                QUERY PLAN                                                                 
+-------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=265833.33..265833.34 rows=1 width=8) (actual time=9204.458..9204.459 rows=1 loops=1)
+   ->  Seq Scan on text_inline_uncompressed  (cost=0.00..265000.00 rows=333333 width=0) (actual time=3.962..9140.206 rows=1000000 loops=1)
+         Filter: (POSITION(('YRdCjpd1'::text) IN (v)) > 0)
+ Planning Time: 0.044 ms
+ JIT:
+   Functions: 4
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.317 ms, Inlining 0.000 ms, Optimization 0.170 ms, Emission 2.493 ms, Total 2.981 ms
+ Execution Time: 9204.843 ms
+(9 行)
+
+CREATE TABLE
+INSERT 0 1000000
+VACUUM
+            substr             | octet_length | pg_column_size | pg_column_size 
+-------------------------------+--------------+----------------+----------------
+ aaaaaaaaaaaaaaaaaaaaaaaaaaaaa |         2005 |             44 |             68
+(1 行)
+
+        ?column?        
+------------------------
+ text_inline_compressed
+(1 行)
+
+                                                            QUERY PLAN                                                            
+----------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on text_inline_compressed  (cost=0.00..19346.00 rows=1000000 width=44) (actual time=0.004..75.517 rows=1000000 loops=1)
+ Planning Time: 0.016 ms
+ Execution Time: 108.117 ms
+(3 行)
+
+                                                            QUERY PLAN                                                            
+----------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on text_inline_compressed  (cost=0.00..19346.00 rows=1000000 width=44) (actual time=0.005..75.372 rows=1000000 loops=1)
+ Planning Time: 0.028 ms
+ Execution Time: 107.948 ms
+(3 行)
+
+                                                            QUERY PLAN                                                            
+----------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on text_inline_compressed  (cost=0.00..19346.00 rows=1000000 width=44) (actual time=0.005..75.447 rows=1000000 loops=1)
+ Planning Time: 0.027 ms
+ Execution Time: 107.997 ms
+(3 行)
+
+                                                              QUERY PLAN                                                               
+---------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=21846.00..21846.01 rows=1 width=8) (actual time=130.628..130.629 rows=1 loops=1)
+   ->  Seq Scan on text_inline_compressed  (cost=0.00..19346.00 rows=1000000 width=0) (actual time=0.005..77.588 rows=1000000 loops=1)
+ Planning Time: 0.036 ms
+ Execution Time: 130.648 ms
+(4 行)
+
+                                                              QUERY PLAN                                                               
+---------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=21846.00..21846.01 rows=1 width=8) (actual time=130.428..130.429 rows=1 loops=1)
+   ->  Seq Scan on text_inline_compressed  (cost=0.00..19346.00 rows=1000000 width=0) (actual time=0.006..77.389 rows=1000000 loops=1)
+ Planning Time: 0.036 ms
+ Execution Time: 130.447 ms
+(4 行)
+
+                                                              QUERY PLAN                                                               
+---------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=21846.00..21846.01 rows=1 width=8) (actual time=130.553..130.554 rows=1 loops=1)
+   ->  Seq Scan on text_inline_compressed  (cost=0.00..19346.00 rows=1000000 width=0) (actual time=0.006..77.457 rows=1000000 loops=1)
+ Planning Time: 0.035 ms
+ Execution Time: 130.573 ms
+(4 行)
+
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=21846.00..21846.01 rows=1 width=8) (actual time=174.737..174.738 rows=1 loops=1)
+   ->  Seq Scan on text_inline_compressed  (cost=0.00..19346.00 rows=1000000 width=0) (actual time=0.008..118.668 rows=1000000 loops=1)
+         Filter: (v IS NOT NULL)
+ Planning Time: 0.043 ms
+ Execution Time: 174.757 ms
+(5 行)
+
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=21846.00..21846.01 rows=1 width=8) (actual time=171.633..171.634 rows=1 loops=1)
+   ->  Seq Scan on text_inline_compressed  (cost=0.00..19346.00 rows=1000000 width=0) (actual time=0.010..116.335 rows=1000000 loops=1)
+         Filter: (v IS NOT NULL)
+ Planning Time: 0.042 ms
+ Execution Time: 171.653 ms
+(5 行)
+
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=21846.00..21846.01 rows=1 width=8) (actual time=169.602..169.603 rows=1 loops=1)
+   ->  Seq Scan on text_inline_compressed  (cost=0.00..19346.00 rows=1000000 width=0) (actual time=0.007..114.906 rows=1000000 loops=1)
+         Filter: (v IS NOT NULL)
+ Planning Time: 0.041 ms
+ Execution Time: 169.624 ms
+(5 行)
+
+                                                              QUERY PLAN                                                               
+---------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=25179.33..25179.34 rows=1 width=8) (actual time=177.435..177.436 rows=1 loops=1)
+   ->  Seq Scan on text_inline_compressed  (cost=0.00..24346.00 rows=333333 width=0) (actual time=0.007..121.326 rows=1000000 loops=1)
+         Filter: (octet_length(v) > 100)
+ Planning Time: 0.044 ms
+ Execution Time: 177.454 ms
+(5 行)
+
+                                                              QUERY PLAN                                                               
+---------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=25179.33..25179.34 rows=1 width=8) (actual time=176.014..176.015 rows=1 loops=1)
+   ->  Seq Scan on text_inline_compressed  (cost=0.00..24346.00 rows=333333 width=0) (actual time=0.006..121.025 rows=1000000 loops=1)
+         Filter: (octet_length(v) > 100)
+ Planning Time: 0.043 ms
+ Execution Time: 176.035 ms
+(5 行)
+
+                                                              QUERY PLAN                                                               
+---------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=25179.33..25179.34 rows=1 width=8) (actual time=176.110..176.111 rows=1 loops=1)
+   ->  Seq Scan on text_inline_compressed  (cost=0.00..24346.00 rows=333333 width=0) (actual time=0.008..121.122 rows=1000000 loops=1)
+         Filter: (octet_length(v) > 100)
+ Planning Time: 0.042 ms
+ Execution Time: 176.130 ms
+(5 行)
+
+                                                           QUERY PLAN                                                            
+---------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=25179.33..25179.34 rows=1 width=8) (actual time=80.794..80.795 rows=1 loops=1)
+   ->  Seq Scan on text_inline_compressed  (cost=0.00..24346.00 rows=333333 width=0) (actual time=80.791..80.792 rows=0 loops=1)
+         Filter: (octet_length(v) > 10000)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.048 ms
+ Execution Time: 80.814 ms
+(6 行)
+
+                                                           QUERY PLAN                                                            
+---------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=25179.33..25179.34 rows=1 width=8) (actual time=81.124..81.125 rows=1 loops=1)
+   ->  Seq Scan on text_inline_compressed  (cost=0.00..24346.00 rows=333333 width=0) (actual time=81.121..81.121 rows=0 loops=1)
+         Filter: (octet_length(v) > 10000)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.043 ms
+ Execution Time: 81.143 ms
+(6 行)
+
+                                                           QUERY PLAN                                                            
+---------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=25179.33..25179.34 rows=1 width=8) (actual time=92.888..92.889 rows=1 loops=1)
+   ->  Seq Scan on text_inline_compressed  (cost=0.00..24346.00 rows=333333 width=0) (actual time=92.884..92.885 rows=0 loops=1)
+         Filter: (octet_length(v) > 10000)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.061 ms
+ Execution Time: 92.916 ms
+(6 行)
+
+                                                            QUERY PLAN                                                            
+----------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=21846.25..21846.26 rows=1 width=8) (actual time=4335.021..4335.022 rows=1 loops=1)
+   ->  Seq Scan on text_inline_compressed  (cost=0.00..21846.00 rows=100 width=0) (actual time=4335.018..4335.018 rows=0 loops=1)
+         Filter: (v ~~ '%notmatch%'::text)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.047 ms
+ Execution Time: 4335.043 ms
+(6 行)
+
+                                                            QUERY PLAN                                                            
+----------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=21846.25..21846.26 rows=1 width=8) (actual time=4257.762..4257.764 rows=1 loops=1)
+   ->  Seq Scan on text_inline_compressed  (cost=0.00..21846.00 rows=100 width=0) (actual time=4257.759..4257.760 rows=0 loops=1)
+         Filter: (v ~~ '%notmatch%'::text)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.051 ms
+ Execution Time: 4257.782 ms
+(6 行)
+
+                                                            QUERY PLAN                                                            
+----------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=21846.25..21846.26 rows=1 width=8) (actual time=4334.498..4334.499 rows=1 loops=1)
+   ->  Seq Scan on text_inline_compressed  (cost=0.00..21846.00 rows=100 width=0) (actual time=4334.495..4334.495 rows=0 loops=1)
+         Filter: (v ~~ '%notmatch%'::text)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.066 ms
+ Execution Time: 4334.523 ms
+(6 行)
+
+                                                             QUERY PLAN                                                              
+-------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=21846.25..21846.26 rows=1 width=8) (actual time=4294.099..4294.100 rows=1 loops=1)
+   ->  Seq Scan on text_inline_compressed  (cost=0.00..21846.00 rows=100 width=0) (actual time=0.012..4236.301 rows=1000000 loops=1)
+         Filter: (v ~~ '%endxxend%'::text)
+ Planning Time: 0.051 ms
+ Execution Time: 4294.121 ms
+(5 行)
+
+                                                             QUERY PLAN                                                              
+-------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=21846.25..21846.26 rows=1 width=8) (actual time=4252.602..4252.603 rows=1 loops=1)
+   ->  Seq Scan on text_inline_compressed  (cost=0.00..21846.00 rows=100 width=0) (actual time=0.014..4192.836 rows=1000000 loops=1)
+         Filter: (v ~~ '%endxxend%'::text)
+ Planning Time: 0.048 ms
+ Execution Time: 4252.621 ms
+(5 行)
+
+                                                             QUERY PLAN                                                              
+-------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=21846.25..21846.26 rows=1 width=8) (actual time=4253.727..4253.728 rows=1 loops=1)
+   ->  Seq Scan on text_inline_compressed  (cost=0.00..21846.00 rows=100 width=0) (actual time=0.012..4195.486 rows=1000000 loops=1)
+         Filter: (v ~~ '%endxxend%'::text)
+ Planning Time: 0.048 ms
+ Execution Time: 4253.750 ms
+(5 行)
+
+                                                             QUERY PLAN                                                             
+------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=21846.25..21846.26 rows=1 width=8) (actual time=15132.031..15132.032 rows=1 loops=1)
+   ->  Seq Scan on text_inline_compressed  (cost=0.00..21846.00 rows=100 width=0) (actual time=15132.028..15132.028 rows=0 loops=1)
+         Filter: (v ~ 'notmatch'::text)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.050 ms
+ Execution Time: 15132.051 ms
+(6 行)
+
+                                                             QUERY PLAN                                                             
+------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=21846.25..21846.26 rows=1 width=8) (actual time=15130.988..15130.989 rows=1 loops=1)
+   ->  Seq Scan on text_inline_compressed  (cost=0.00..21846.00 rows=100 width=0) (actual time=15130.985..15130.985 rows=0 loops=1)
+         Filter: (v ~ 'notmatch'::text)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.049 ms
+ Execution Time: 15131.007 ms
+(6 行)
+
+                                                             QUERY PLAN                                                             
+------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=21846.25..21846.26 rows=1 width=8) (actual time=15135.272..15135.274 rows=1 loops=1)
+   ->  Seq Scan on text_inline_compressed  (cost=0.00..21846.00 rows=100 width=0) (actual time=15135.269..15135.269 rows=0 loops=1)
+         Filter: (v ~ 'notmatch'::text)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.049 ms
+ Execution Time: 15135.292 ms
+(6 行)
+
+                                                              QUERY PLAN                                                              
+--------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=21846.25..21846.26 rows=1 width=8) (actual time=15639.534..15639.535 rows=1 loops=1)
+   ->  Seq Scan on text_inline_compressed  (cost=0.00..21846.00 rows=100 width=0) (actual time=0.033..15575.978 rows=1000000 loops=1)
+         Filter: (v ~ 'endxxend'::text)
+ Planning Time: 0.086 ms
+ Execution Time: 15639.553 ms
+(5 行)
+
+                                                              QUERY PLAN                                                              
+--------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=21846.25..21846.26 rows=1 width=8) (actual time=15632.758..15632.759 rows=1 loops=1)
+   ->  Seq Scan on text_inline_compressed  (cost=0.00..21846.00 rows=100 width=0) (actual time=0.027..15569.485 rows=1000000 loops=1)
+         Filter: (v ~ 'endxxend'::text)
+ Planning Time: 0.052 ms
+ Execution Time: 15632.777 ms
+(5 行)
+
+                                                              QUERY PLAN                                                              
+--------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=21846.25..21846.26 rows=1 width=8) (actual time=15630.083..15630.084 rows=1 loops=1)
+   ->  Seq Scan on text_inline_compressed  (cost=0.00..21846.00 rows=100 width=0) (actual time=0.031..15566.957 rows=1000000 loops=1)
+         Filter: (v ~ 'endxxend'::text)
+ Planning Time: 0.050 ms
+ Execution Time: 15630.101 ms
+(5 行)
+
+                                                             QUERY PLAN                                                              
+-------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=25179.33..25179.34 rows=1 width=8) (actual time=4273.645..4273.646 rows=1 loops=1)
+   ->  Seq Scan on text_inline_compressed  (cost=0.00..24346.00 rows=333333 width=0) (actual time=4273.641..4273.641 rows=0 loops=1)
+         Filter: (POSITION(('notmatch'::text) IN (v)) > 0)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.043 ms
+ Execution Time: 4273.665 ms
+(6 行)
+
+                                                             QUERY PLAN                                                              
+-------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=25179.33..25179.34 rows=1 width=8) (actual time=4269.303..4269.304 rows=1 loops=1)
+   ->  Seq Scan on text_inline_compressed  (cost=0.00..24346.00 rows=333333 width=0) (actual time=4269.299..4269.300 rows=0 loops=1)
+         Filter: (POSITION(('notmatch'::text) IN (v)) > 0)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.043 ms
+ Execution Time: 4269.321 ms
+(6 行)
+
+                                                             QUERY PLAN                                                              
+-------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=25179.33..25179.34 rows=1 width=8) (actual time=4273.728..4273.729 rows=1 loops=1)
+   ->  Seq Scan on text_inline_compressed  (cost=0.00..24346.00 rows=333333 width=0) (actual time=4273.724..4273.725 rows=0 loops=1)
+         Filter: (POSITION(('notmatch'::text) IN (v)) > 0)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.040 ms
+ Execution Time: 4273.748 ms
+(6 行)
+
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=25179.33..25179.34 rows=1 width=8) (actual time=8891.848..8891.849 rows=1 loops=1)
+   ->  Seq Scan on text_inline_compressed  (cost=0.00..24346.00 rows=333333 width=0) (actual time=0.020..8832.581 rows=1000000 loops=1)
+         Filter: (POSITION(('endxxend'::text) IN (v)) > 0)
+ Planning Time: 0.043 ms
+ Execution Time: 8891.866 ms
+(5 行)
+
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=25179.33..25179.34 rows=1 width=8) (actual time=8893.452..8893.453 rows=1 loops=1)
+   ->  Seq Scan on text_inline_compressed  (cost=0.00..24346.00 rows=333333 width=0) (actual time=0.017..8830.517 rows=1000000 loops=1)
+         Filter: (POSITION(('endxxend'::text) IN (v)) > 0)
+ Planning Time: 0.042 ms
+ Execution Time: 8893.475 ms
+(5 行)
+
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=25179.33..25179.34 rows=1 width=8) (actual time=8884.720..8884.721 rows=1 loops=1)
+   ->  Seq Scan on text_inline_compressed  (cost=0.00..24346.00 rows=333333 width=0) (actual time=0.022..8823.352 rows=1000000 loops=1)
+         Filter: (POSITION(('endxxend'::text) IN (v)) > 0)
+ Planning Time: 0.057 ms
+ Execution Time: 8884.742 ms
+(5 行)
+
+CREATE TABLE
+INSERT 0 1000000
+VACUUM
+            substr             | octet_length | pg_column_size | pg_column_size 
+-------------------------------+--------------+----------------+----------------
+ oaVZ3pJPDLlrJ0oCqEDqUUyGZkHE2 |         2005 |           2005 |           2033
+(1 行)
+
+        ?column?         
+-------------------------
+ text_toast_uncompressed
+(1 行)
+
+                                                             QUERY PLAN                                                             
+------------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on text_toast_uncompressed  (cost=0.00..16370.00 rows=1000000 width=18) (actual time=0.017..153.596 rows=1000000 loops=1)
+ Planning Time: 0.099 ms
+ Execution Time: 199.483 ms
+(3 行)
+
+                                                            QUERY PLAN                                                             
+-----------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on text_toast_uncompressed  (cost=0.00..16370.00 rows=1000000 width=18) (actual time=0.004..75.272 rows=1000000 loops=1)
+ Planning Time: 0.035 ms
+ Execution Time: 108.293 ms
+(3 行)
+
+                                                            QUERY PLAN                                                             
+-----------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on text_toast_uncompressed  (cost=0.00..16370.00 rows=1000000 width=18) (actual time=0.006..77.517 rows=1000000 loops=1)
+ Planning Time: 0.037 ms
+ Execution Time: 111.715 ms
+(3 行)
+
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.00..18870.01 rows=1 width=8) (actual time=134.767..134.768 rows=1 loops=1)
+   ->  Seq Scan on text_toast_uncompressed  (cost=0.00..16370.00 rows=1000000 width=0) (actual time=0.008..78.193 rows=1000000 loops=1)
+ Planning Time: 0.045 ms
+ Execution Time: 134.792 ms
+(4 行)
+
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.00..18870.01 rows=1 width=8) (actual time=134.371..134.372 rows=1 loops=1)
+   ->  Seq Scan on text_toast_uncompressed  (cost=0.00..16370.00 rows=1000000 width=0) (actual time=0.007..77.907 rows=1000000 loops=1)
+ Planning Time: 0.047 ms
+ Execution Time: 134.393 ms
+(4 行)
+
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.00..18870.01 rows=1 width=8) (actual time=133.718..133.719 rows=1 loops=1)
+   ->  Seq Scan on text_toast_uncompressed  (cost=0.00..16370.00 rows=1000000 width=0) (actual time=0.007..77.621 rows=1000000 loops=1)
+ Planning Time: 0.044 ms
+ Execution Time: 133.741 ms
+(4 行)
+
+                                                               QUERY PLAN                                                                
+-----------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.00..18870.01 rows=1 width=8) (actual time=169.838..169.839 rows=1 loops=1)
+   ->  Seq Scan on text_toast_uncompressed  (cost=0.00..16370.00 rows=1000000 width=0) (actual time=0.007..115.294 rows=1000000 loops=1)
+         Filter: (v IS NOT NULL)
+ Planning Time: 0.051 ms
+ Execution Time: 169.862 ms
+(5 行)
+
+                                                               QUERY PLAN                                                                
+-----------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.00..18870.01 rows=1 width=8) (actual time=179.145..179.146 rows=1 loops=1)
+   ->  Seq Scan on text_toast_uncompressed  (cost=0.00..16370.00 rows=1000000 width=0) (actual time=0.007..121.920 rows=1000000 loops=1)
+         Filter: (v IS NOT NULL)
+ Planning Time: 0.052 ms
+ Execution Time: 179.169 ms
+(5 行)
+
+                                                               QUERY PLAN                                                                
+-----------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.00..18870.01 rows=1 width=8) (actual time=176.197..176.198 rows=1 loops=1)
+   ->  Seq Scan on text_toast_uncompressed  (cost=0.00..16370.00 rows=1000000 width=0) (actual time=0.007..119.792 rows=1000000 loops=1)
+         Filter: (v IS NOT NULL)
+ Planning Time: 0.051 ms
+ Execution Time: 176.222 ms
+(5 行)
+
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=22203.33..22203.34 rows=1 width=8) (actual time=178.222..178.223 rows=1 loops=1)
+   ->  Seq Scan on text_toast_uncompressed  (cost=0.00..21370.00 rows=333333 width=0) (actual time=0.007..122.751 rows=1000000 loops=1)
+         Filter: (octet_length(v) > 100)
+ Planning Time: 0.055 ms
+ Execution Time: 178.243 ms
+(5 行)
+
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=22203.33..22203.34 rows=1 width=8) (actual time=180.592..180.592 rows=1 loops=1)
+   ->  Seq Scan on text_toast_uncompressed  (cost=0.00..21370.00 rows=333333 width=0) (actual time=0.007..124.664 rows=1000000 loops=1)
+         Filter: (octet_length(v) > 100)
+ Planning Time: 0.054 ms
+ Execution Time: 180.611 ms
+(5 行)
+
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=22203.33..22203.34 rows=1 width=8) (actual time=177.181..177.182 rows=1 loops=1)
+   ->  Seq Scan on text_toast_uncompressed  (cost=0.00..21370.00 rows=333333 width=0) (actual time=0.009..122.052 rows=1000000 loops=1)
+         Filter: (octet_length(v) > 100)
+ Planning Time: 0.051 ms
+ Execution Time: 177.205 ms
+(5 行)
+
+                                                            QUERY PLAN                                                            
+----------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=22203.33..22203.34 rows=1 width=8) (actual time=81.159..81.160 rows=1 loops=1)
+   ->  Seq Scan on text_toast_uncompressed  (cost=0.00..21370.00 rows=333333 width=0) (actual time=81.156..81.156 rows=0 loops=1)
+         Filter: (octet_length(v) > 10000)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.056 ms
+ Execution Time: 81.183 ms
+(6 行)
+
+                                                            QUERY PLAN                                                            
+----------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=22203.33..22203.34 rows=1 width=8) (actual time=86.873..86.874 rows=1 loops=1)
+   ->  Seq Scan on text_toast_uncompressed  (cost=0.00..21370.00 rows=333333 width=0) (actual time=86.869..86.870 rows=0 loops=1)
+         Filter: (octet_length(v) > 10000)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.056 ms
+ Execution Time: 86.899 ms
+(6 行)
+
+                                                            QUERY PLAN                                                            
+----------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=22203.33..22203.34 rows=1 width=8) (actual time=84.676..84.677 rows=1 loops=1)
+   ->  Seq Scan on text_toast_uncompressed  (cost=0.00..21370.00 rows=333333 width=0) (actual time=84.673..84.673 rows=0 loops=1)
+         Filter: (octet_length(v) > 10000)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.052 ms
+ Execution Time: 84.703 ms
+(6 行)
+
+                                                            QUERY PLAN                                                             
+-----------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.25..18870.26 rows=1 width=8) (actual time=8938.930..8938.931 rows=1 loops=1)
+   ->  Seq Scan on text_toast_uncompressed  (cost=0.00..18870.00 rows=100 width=0) (actual time=8938.926..8938.926 rows=0 loops=1)
+         Filter: (v ~~ '%notmatch%'::text)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.065 ms
+ Execution Time: 8938.955 ms
+(6 行)
+
+                                                            QUERY PLAN                                                             
+-----------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.25..18870.26 rows=1 width=8) (actual time=8657.065..8657.066 rows=1 loops=1)
+   ->  Seq Scan on text_toast_uncompressed  (cost=0.00..18870.00 rows=100 width=0) (actual time=8657.062..8657.062 rows=0 loops=1)
+         Filter: (v ~~ '%notmatch%'::text)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.044 ms
+ Execution Time: 8657.083 ms
+(6 行)
+
+                                                            QUERY PLAN                                                             
+-----------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.25..18870.26 rows=1 width=8) (actual time=8668.947..8668.948 rows=1 loops=1)
+   ->  Seq Scan on text_toast_uncompressed  (cost=0.00..18870.00 rows=100 width=0) (actual time=8668.944..8668.944 rows=0 loops=1)
+         Filter: (v ~~ '%notmatch%'::text)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.048 ms
+ Execution Time: 8668.967 ms
+(6 行)
+
+                                                              QUERY PLAN                                                              
+--------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.25..18870.26 rows=1 width=8) (actual time=8472.121..8472.122 rows=1 loops=1)
+   ->  Seq Scan on text_toast_uncompressed  (cost=0.00..18870.00 rows=100 width=0) (actual time=0.048..8351.253 rows=1000000 loops=1)
+         Filter: (v ~~ '%RdCjpd18%'::text)
+ Planning Time: 0.050 ms
+ Execution Time: 8472.140 ms
+(5 行)
+
+                                                              QUERY PLAN                                                              
+--------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.25..18870.26 rows=1 width=8) (actual time=8484.513..8484.514 rows=1 loops=1)
+   ->  Seq Scan on text_toast_uncompressed  (cost=0.00..18870.00 rows=100 width=0) (actual time=0.048..8364.321 rows=1000000 loops=1)
+         Filter: (v ~~ '%RdCjpd18%'::text)
+ Planning Time: 0.051 ms
+ Execution Time: 8484.531 ms
+(5 行)
+
+                                                              QUERY PLAN                                                              
+--------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.25..18870.26 rows=1 width=8) (actual time=8463.792..8463.793 rows=1 loops=1)
+   ->  Seq Scan on text_toast_uncompressed  (cost=0.00..18870.00 rows=100 width=0) (actual time=0.045..8342.937 rows=1000000 loops=1)
+         Filter: (v ~~ '%RdCjpd18%'::text)
+ Planning Time: 0.051 ms
+ Execution Time: 8463.810 ms
+(5 行)
+
+                                                             QUERY PLAN                                                              
+-------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.25..18870.26 rows=1 width=8) (actual time=19821.040..19821.041 rows=1 loops=1)
+   ->  Seq Scan on text_toast_uncompressed  (cost=0.00..18870.00 rows=100 width=0) (actual time=19821.037..19821.037 rows=0 loops=1)
+         Filter: (v ~ 'notmatch'::text)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.050 ms
+ Execution Time: 19821.058 ms
+(6 行)
+
+                                                             QUERY PLAN                                                              
+-------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.25..18870.26 rows=1 width=8) (actual time=19851.958..19851.959 rows=1 loops=1)
+   ->  Seq Scan on text_toast_uncompressed  (cost=0.00..18870.00 rows=100 width=0) (actual time=19851.954..19851.954 rows=0 loops=1)
+         Filter: (v ~ 'notmatch'::text)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.051 ms
+ Execution Time: 19851.976 ms
+(6 行)
+
+                                                             QUERY PLAN                                                              
+-------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.25..18870.26 rows=1 width=8) (actual time=19837.580..19837.581 rows=1 loops=1)
+   ->  Seq Scan on text_toast_uncompressed  (cost=0.00..18870.00 rows=100 width=0) (actual time=19837.576..19837.577 rows=0 loops=1)
+         Filter: (v ~ 'notmatch'::text)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.051 ms
+ Execution Time: 19837.598 ms
+(6 行)
+
+                                                              QUERY PLAN                                                               
+---------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.25..18870.26 rows=1 width=8) (actual time=20812.987..20812.988 rows=1 loops=1)
+   ->  Seq Scan on text_toast_uncompressed  (cost=0.00..18870.00 rows=100 width=0) (actual time=0.063..20672.989 rows=1000000 loops=1)
+         Filter: (v ~ 'RdCjpd18'::text)
+ Planning Time: 0.077 ms
+ Execution Time: 20813.005 ms
+(5 行)
+
+                                                              QUERY PLAN                                                               
+---------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.25..18870.26 rows=1 width=8) (actual time=20818.531..20818.532 rows=1 loops=1)
+   ->  Seq Scan on text_toast_uncompressed  (cost=0.00..18870.00 rows=100 width=0) (actual time=0.063..20678.791 rows=1000000 loops=1)
+         Filter: (v ~ 'RdCjpd18'::text)
+ Planning Time: 0.052 ms
+ Execution Time: 20818.550 ms
+(5 行)
+
+                                                              QUERY PLAN                                                               
+---------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.25..18870.26 rows=1 width=8) (actual time=20829.176..20829.177 rows=1 loops=1)
+   ->  Seq Scan on text_toast_uncompressed  (cost=0.00..18870.00 rows=100 width=0) (actual time=0.071..20689.666 rows=1000000 loops=1)
+         Filter: (v ~ 'RdCjpd18'::text)
+ Planning Time: 0.062 ms
+ Execution Time: 20829.196 ms
+(5 行)
+
+                                                              QUERY PLAN                                                              
+--------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=22203.33..22203.34 rows=1 width=8) (actual time=6227.480..6227.481 rows=1 loops=1)
+   ->  Seq Scan on text_toast_uncompressed  (cost=0.00..21370.00 rows=333333 width=0) (actual time=6227.476..6227.476 rows=0 loops=1)
+         Filter: (POSITION(('notmatch'::text) IN (v)) > 0)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.053 ms
+ Execution Time: 6227.504 ms
+(6 行)
+
+                                                              QUERY PLAN                                                              
+--------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=22203.33..22203.34 rows=1 width=8) (actual time=6234.670..6234.671 rows=1 loops=1)
+   ->  Seq Scan on text_toast_uncompressed  (cost=0.00..21370.00 rows=333333 width=0) (actual time=6234.667..6234.667 rows=0 loops=1)
+         Filter: (POSITION(('notmatch'::text) IN (v)) > 0)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.055 ms
+ Execution Time: 6234.694 ms
+(6 行)
+
+                                                              QUERY PLAN                                                              
+--------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=22203.33..22203.34 rows=1 width=8) (actual time=6229.249..6229.250 rows=1 loops=1)
+   ->  Seq Scan on text_toast_uncompressed  (cost=0.00..21370.00 rows=333333 width=0) (actual time=6229.245..6229.246 rows=0 loops=1)
+         Filter: (POSITION(('notmatch'::text) IN (v)) > 0)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.052 ms
+ Execution Time: 6229.269 ms
+(6 行)
+
+                                                                QUERY PLAN                                                                
+------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=22203.33..22203.34 rows=1 width=8) (actual time=13318.627..13318.628 rows=1 loops=1)
+   ->  Seq Scan on text_toast_uncompressed  (cost=0.00..21370.00 rows=333333 width=0) (actual time=0.062..13188.456 rows=1000000 loops=1)
+         Filter: (POSITION(('RdCjpd18'::text) IN (v)) > 0)
+ Planning Time: 0.058 ms
+ Execution Time: 13318.655 ms
+(5 行)
+
+                                                                QUERY PLAN                                                                
+------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=22203.33..22203.34 rows=1 width=8) (actual time=13308.492..13308.493 rows=1 loops=1)
+   ->  Seq Scan on text_toast_uncompressed  (cost=0.00..21370.00 rows=333333 width=0) (actual time=0.058..13179.962 rows=1000000 loops=1)
+         Filter: (POSITION(('RdCjpd18'::text) IN (v)) > 0)
+ Planning Time: 0.053 ms
+ Execution Time: 13308.513 ms
+(5 行)
+
+                                                                QUERY PLAN                                                                
+------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=22203.33..22203.34 rows=1 width=8) (actual time=13305.400..13305.401 rows=1 loops=1)
+   ->  Seq Scan on text_toast_uncompressed  (cost=0.00..21370.00 rows=333333 width=0) (actual time=0.062..13171.708 rows=1000000 loops=1)
+         Filter: (POSITION(('RdCjpd18'::text) IN (v)) > 0)
+ Planning Time: 0.055 ms
+ Execution Time: 13305.420 ms
+(5 行)
+
+CREATE TABLE
+INSERT 0 1000000
+VACUUM
+            substr             | octet_length | pg_column_size | pg_column_size 
+-------------------------------+--------------+----------------+----------------
+ aaaaaaaaaaaaaaaaaaaaaaaaaaaaa |         2766 |           2005 |           2033
+(1 行)
+
+       ?column?        
+-----------------------
+ text_toast_compressed
+(1 行)
+
+                                                            QUERY PLAN                                                            
+----------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on text_toast_compressed  (cost=0.00..16370.00 rows=1000000 width=18) (actual time=0.006..122.042 rows=1000000 loops=1)
+ Planning Time: 0.016 ms
+ Execution Time: 154.844 ms
+(3 行)
+
+                                                           QUERY PLAN                                                            
+---------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on text_toast_compressed  (cost=0.00..16370.00 rows=1000000 width=18) (actual time=0.007..76.414 rows=1000000 loops=1)
+ Planning Time: 0.035 ms
+ Execution Time: 110.110 ms
+(3 行)
+
+                                                           QUERY PLAN                                                            
+---------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on text_toast_compressed  (cost=0.00..16370.00 rows=1000000 width=18) (actual time=0.006..77.487 rows=1000000 loops=1)
+ Planning Time: 0.038 ms
+ Execution Time: 111.651 ms
+(3 行)
+
+                                                              QUERY PLAN                                                              
+--------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.00..18870.01 rows=1 width=8) (actual time=136.916..136.917 rows=1 loops=1)
+   ->  Seq Scan on text_toast_compressed  (cost=0.00..16370.00 rows=1000000 width=0) (actual time=0.006..82.437 rows=1000000 loops=1)
+ Planning Time: 0.042 ms
+ Execution Time: 136.935 ms
+(4 行)
+
+                                                              QUERY PLAN                                                              
+--------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.00..18870.01 rows=1 width=8) (actual time=136.628..136.629 rows=1 loops=1)
+   ->  Seq Scan on text_toast_compressed  (cost=0.00..16370.00 rows=1000000 width=0) (actual time=0.005..82.318 rows=1000000 loops=1)
+ Planning Time: 0.048 ms
+ Execution Time: 136.647 ms
+(4 行)
+
+                                                              QUERY PLAN                                                              
+--------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.00..18870.01 rows=1 width=8) (actual time=138.448..138.449 rows=1 loops=1)
+   ->  Seq Scan on text_toast_compressed  (cost=0.00..16370.00 rows=1000000 width=0) (actual time=0.005..83.324 rows=1000000 loops=1)
+ Planning Time: 0.041 ms
+ Execution Time: 138.467 ms
+(4 行)
+
+                                                              QUERY PLAN                                                               
+---------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.00..18870.01 rows=1 width=8) (actual time=174.664..174.665 rows=1 loops=1)
+   ->  Seq Scan on text_toast_compressed  (cost=0.00..16370.00 rows=1000000 width=0) (actual time=0.007..117.958 rows=1000000 loops=1)
+         Filter: (v IS NOT NULL)
+ Planning Time: 0.046 ms
+ Execution Time: 174.683 ms
+(5 行)
+
+                                                              QUERY PLAN                                                               
+---------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.00..18870.01 rows=1 width=8) (actual time=185.810..185.811 rows=1 loops=1)
+   ->  Seq Scan on text_toast_compressed  (cost=0.00..16370.00 rows=1000000 width=0) (actual time=0.007..126.209 rows=1000000 loops=1)
+         Filter: (v IS NOT NULL)
+ Planning Time: 0.044 ms
+ Execution Time: 185.829 ms
+(5 行)
+
+                                                              QUERY PLAN                                                               
+---------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.00..18870.01 rows=1 width=8) (actual time=172.747..172.748 rows=1 loops=1)
+   ->  Seq Scan on text_toast_compressed  (cost=0.00..16370.00 rows=1000000 width=0) (actual time=0.007..116.723 rows=1000000 loops=1)
+         Filter: (v IS NOT NULL)
+ Planning Time: 0.046 ms
+ Execution Time: 172.767 ms
+(5 行)
+
+                                                              QUERY PLAN                                                              
+--------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=22203.33..22203.34 rows=1 width=8) (actual time=175.941..175.941 rows=1 loops=1)
+   ->  Seq Scan on text_toast_compressed  (cost=0.00..21370.00 rows=333333 width=0) (actual time=0.008..120.993 rows=1000000 loops=1)
+         Filter: (octet_length(v) > 100)
+ Planning Time: 0.048 ms
+ Execution Time: 175.967 ms
+(5 行)
+
+                                                              QUERY PLAN                                                              
+--------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=22203.33..22203.34 rows=1 width=8) (actual time=184.897..184.898 rows=1 loops=1)
+   ->  Seq Scan on text_toast_compressed  (cost=0.00..21370.00 rows=333333 width=0) (actual time=0.010..127.449 rows=1000000 loops=1)
+         Filter: (octet_length(v) > 100)
+ Planning Time: 0.048 ms
+ Execution Time: 184.920 ms
+(5 行)
+
+                                                              QUERY PLAN                                                              
+--------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=22203.33..22203.34 rows=1 width=8) (actual time=180.006..180.007 rows=1 loops=1)
+   ->  Seq Scan on text_toast_compressed  (cost=0.00..21370.00 rows=333333 width=0) (actual time=0.009..123.877 rows=1000000 loops=1)
+         Filter: (octet_length(v) > 100)
+ Planning Time: 0.048 ms
+ Execution Time: 180.028 ms
+(5 行)
+
+                                                           QUERY PLAN                                                           
+--------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=22203.33..22203.34 rows=1 width=8) (actual time=81.789..81.790 rows=1 loops=1)
+   ->  Seq Scan on text_toast_compressed  (cost=0.00..21370.00 rows=333333 width=0) (actual time=81.786..81.786 rows=0 loops=1)
+         Filter: (octet_length(v) > 10000)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.059 ms
+ Execution Time: 81.817 ms
+(6 行)
+
+                                                           QUERY PLAN                                                           
+--------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=22203.33..22203.34 rows=1 width=8) (actual time=88.951..88.952 rows=1 loops=1)
+   ->  Seq Scan on text_toast_compressed  (cost=0.00..21370.00 rows=333333 width=0) (actual time=88.948..88.949 rows=0 loops=1)
+         Filter: (octet_length(v) > 10000)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.046 ms
+ Execution Time: 88.973 ms
+(6 行)
+
+                                                           QUERY PLAN                                                           
+--------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=22203.33..22203.34 rows=1 width=8) (actual time=81.247..81.248 rows=1 loops=1)
+   ->  Seq Scan on text_toast_compressed  (cost=0.00..21370.00 rows=333333 width=0) (actual time=81.244..81.244 rows=0 loops=1)
+         Filter: (octet_length(v) > 10000)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.048 ms
+ Execution Time: 81.268 ms
+(6 行)
+
+                                                            QUERY PLAN                                                             
+-----------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.25..18870.26 rows=1 width=8) (actual time=18809.136..18809.137 rows=1 loops=1)
+   ->  Seq Scan on text_toast_compressed  (cost=0.00..18870.00 rows=100 width=0) (actual time=18809.132..18809.132 rows=0 loops=1)
+         Filter: (v ~~ '%notmatch%'::text)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.053 ms
+ Execution Time: 18809.162 ms
+(6 行)
+
+                                                            QUERY PLAN                                                             
+-----------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.25..18870.26 rows=1 width=8) (actual time=15680.899..15680.900 rows=1 loops=1)
+   ->  Seq Scan on text_toast_compressed  (cost=0.00..18870.00 rows=100 width=0) (actual time=15680.895..15680.896 rows=0 loops=1)
+         Filter: (v ~~ '%notmatch%'::text)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.045 ms
+ Execution Time: 15680.920 ms
+(6 行)
+
+                                                            QUERY PLAN                                                             
+-----------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.25..18870.26 rows=1 width=8) (actual time=15827.174..15827.175 rows=1 loops=1)
+   ->  Seq Scan on text_toast_compressed  (cost=0.00..18870.00 rows=100 width=0) (actual time=15827.171..15827.171 rows=0 loops=1)
+         Filter: (v ~~ '%notmatch%'::text)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.053 ms
+ Execution Time: 15827.208 ms
+(6 行)
+
+                                                             QUERY PLAN                                                              
+-------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.25..18870.26 rows=1 width=8) (actual time=15162.221..15162.222 rows=1 loops=1)
+   ->  Seq Scan on text_toast_compressed  (cost=0.00..18870.00 rows=100 width=0) (actual time=1.199..15028.787 rows=1000000 loops=1)
+         Filter: (v ~~ '%e1jVO5Vr%'::text)
+ Planning Time: 0.049 ms
+ Execution Time: 15162.240 ms
+(5 行)
+
+                                                             QUERY PLAN                                                              
+-------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.25..18870.26 rows=1 width=8) (actual time=15143.016..15143.017 rows=1 loops=1)
+   ->  Seq Scan on text_toast_compressed  (cost=0.00..18870.00 rows=100 width=0) (actual time=1.219..15010.494 rows=1000000 loops=1)
+         Filter: (v ~~ '%e1jVO5Vr%'::text)
+ Planning Time: 0.044 ms
+ Execution Time: 15143.035 ms
+(5 行)
+
+                                                             QUERY PLAN                                                              
+-------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.25..18870.26 rows=1 width=8) (actual time=15336.073..15336.074 rows=1 loops=1)
+   ->  Seq Scan on text_toast_compressed  (cost=0.00..18870.00 rows=100 width=0) (actual time=1.062..15203.159 rows=1000000 loops=1)
+         Filter: (v ~~ '%e1jVO5Vr%'::text)
+ Planning Time: 0.054 ms
+ Execution Time: 15336.092 ms
+(5 行)
+
+                                                            QUERY PLAN                                                             
+-----------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.25..18870.26 rows=1 width=8) (actual time=30394.605..30394.606 rows=1 loops=1)
+   ->  Seq Scan on text_toast_compressed  (cost=0.00..18870.00 rows=100 width=0) (actual time=30394.602..30394.602 rows=0 loops=1)
+         Filter: (v ~ 'notmatch'::text)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.053 ms
+ Execution Time: 30394.628 ms
+(6 行)
+
+                                                            QUERY PLAN                                                             
+-----------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.25..18870.26 rows=1 width=8) (actual time=30426.295..30426.296 rows=1 loops=1)
+   ->  Seq Scan on text_toast_compressed  (cost=0.00..18870.00 rows=100 width=0) (actual time=30426.292..30426.292 rows=0 loops=1)
+         Filter: (v ~ 'notmatch'::text)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.045 ms
+ Execution Time: 30426.313 ms
+(6 行)
+
+                                                            QUERY PLAN                                                             
+-----------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.25..18870.26 rows=1 width=8) (actual time=30441.171..30441.172 rows=1 loops=1)
+   ->  Seq Scan on text_toast_compressed  (cost=0.00..18870.00 rows=100 width=0) (actual time=30441.168..30441.168 rows=0 loops=1)
+         Filter: (v ~ 'notmatch'::text)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.048 ms
+ Execution Time: 30441.189 ms
+(6 行)
+
+                                                             QUERY PLAN                                                              
+-------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.25..18870.26 rows=1 width=8) (actual time=31161.019..31161.020 rows=1 loops=1)
+   ->  Seq Scan on text_toast_compressed  (cost=0.00..18870.00 rows=100 width=0) (actual time=1.192..31014.308 rows=1000000 loops=1)
+         Filter: (v ~ 'e1jVO5Vr'::text)
+ Planning Time: 0.071 ms
+ Execution Time: 31161.041 ms
+(5 行)
+
+                                                             QUERY PLAN                                                              
+-------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.25..18870.26 rows=1 width=8) (actual time=31165.702..31165.703 rows=1 loops=1)
+   ->  Seq Scan on text_toast_compressed  (cost=0.00..18870.00 rows=100 width=0) (actual time=1.115..31019.021 rows=1000000 loops=1)
+         Filter: (v ~ 'e1jVO5Vr'::text)
+ Planning Time: 0.054 ms
+ Execution Time: 31165.726 ms
+(5 行)
+
+                                                             QUERY PLAN                                                              
+-------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=18870.25..18870.26 rows=1 width=8) (actual time=31193.739..31193.740 rows=1 loops=1)
+   ->  Seq Scan on text_toast_compressed  (cost=0.00..18870.00 rows=100 width=0) (actual time=1.139..31046.703 rows=1000000 loops=1)
+         Filter: (v ~ 'e1jVO5Vr'::text)
+ Planning Time: 0.069 ms
+ Execution Time: 31193.759 ms
+(5 行)
+
+                                                              QUERY PLAN                                                              
+--------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=22203.33..22203.34 rows=1 width=8) (actual time=13257.169..13257.170 rows=1 loops=1)
+   ->  Seq Scan on text_toast_compressed  (cost=0.00..21370.00 rows=333333 width=0) (actual time=13257.165..13257.165 rows=0 loops=1)
+         Filter: (POSITION(('notmatch'::text) IN (v)) > 0)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.043 ms
+ Execution Time: 13257.187 ms
+(6 行)
+
+                                                              QUERY PLAN                                                              
+--------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=22203.33..22203.34 rows=1 width=8) (actual time=13336.249..13336.250 rows=1 loops=1)
+   ->  Seq Scan on text_toast_compressed  (cost=0.00..21370.00 rows=333333 width=0) (actual time=13336.245..13336.246 rows=0 loops=1)
+         Filter: (POSITION(('notmatch'::text) IN (v)) > 0)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.047 ms
+ Execution Time: 13336.268 ms
+(6 行)
+
+                                                              QUERY PLAN                                                              
+--------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=22203.33..22203.34 rows=1 width=8) (actual time=13237.419..13237.420 rows=1 loops=1)
+   ->  Seq Scan on text_toast_compressed  (cost=0.00..21370.00 rows=333333 width=0) (actual time=13237.415..13237.416 rows=0 loops=1)
+         Filter: (POSITION(('notmatch'::text) IN (v)) > 0)
+         Rows Removed by Filter: 1000000
+ Planning Time: 0.041 ms
+ Execution Time: 13237.438 ms
+(6 行)
+
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=22203.33..22203.34 rows=1 width=8) (actual time=21571.198..21571.199 rows=1 loops=1)
+   ->  Seq Scan on text_toast_compressed  (cost=0.00..21370.00 rows=333333 width=0) (actual time=1.203..21407.077 rows=1000000 loops=1)
+         Filter: (POSITION(('e1jVO5Vr'::text) IN (v)) > 0)
+ Planning Time: 0.038 ms
+ Execution Time: 21571.219 ms
+(5 行)
+
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=22203.33..22203.34 rows=1 width=8) (actual time=21660.535..21660.536 rows=1 loops=1)
+   ->  Seq Scan on text_toast_compressed  (cost=0.00..21370.00 rows=333333 width=0) (actual time=1.220..21496.355 rows=1000000 loops=1)
+         Filter: (POSITION(('e1jVO5Vr'::text) IN (v)) > 0)
+ Planning Time: 0.043 ms
+ Execution Time: 21660.552 ms
+(5 行)
+
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=22203.33..22203.34 rows=1 width=8) (actual time=21623.341..21623.342 rows=1 loops=1)
+   ->  Seq Scan on text_toast_compressed  (cost=0.00..21370.00 rows=333333 width=0) (actual time=1.127..21459.505 rows=1000000 loops=1)
+         Filter: (POSITION(('e1jVO5Vr'::text) IN (v)) > 0)
+ Planning Time: 0.040 ms
+ Execution Time: 21623.359 ms
+(5 行)
+
+   oid    |         relname          | reltoastrelid | relpages | reltuples | toast_pages | toast_tuples | total_relation_size | total_relation_size_pretty 
+----------+--------------------------+---------------+----------+-----------+-------------+--------------+---------------------+----------------------------
+ 18125953 | text_inline_compressed   |      18125956 |     9346 |     1e+06 |           0 |            0 |            76619776 | 73 MB
+ 18125948 | text_inline_uncompressed |      18125951 |   250000 |     1e+06 |           0 |            0 |          2048598016 | 1954 MB
+ 19125963 | text_toast_compressed    |      19125966 |     6370 |     1e+06 |      333334 |        2e+06 |          2828615680 | 2698 MB
+ 18125958 | text_toast_uncompressed  |      18125961 |     6370 |     1e+06 |      333334 |        2e+06 |          2828615680 | 2698 MB
+(4 行)
+

@@ -1,0 +1,530 @@
+SET
+CREATE EXTENSION
+CREATE TABLE
+INSERT 0 1000000
+VACUUM
+            substr             | octet_length | pg_column_size | pg_column_size 
+-------------------------------+--------------+----------------+----------------
+ "k0k0k0k0k0k0k0k0k0k0k0k0k0k0 |         1941 |           2008 |           2032
+(1 行)
+
+             ?column?             
+----------------------------------
+ hstore_inline_uncompressed found
+(1 行)
+
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on hstore_inline_uncompressed  (cost=0.00..262500.00 rows=1000000 width=32) (actual time=2.784..893.453 rows=1000000 loops=1)
+ Planning Time: 0.021 ms
+ JIT:
+   Functions: 2
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.151 ms, Inlining 0.000 ms, Optimization 0.163 ms, Emission 2.606 ms, Total 2.920 ms
+ Execution Time: 970.813 ms
+(7 行)
+
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on hstore_inline_uncompressed  (cost=0.00..262500.00 rows=1000000 width=32) (actual time=1.877..852.518 rows=1000000 loops=1)
+ Planning Time: 0.033 ms
+ JIT:
+   Functions: 2
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.240 ms, Inlining 0.000 ms, Optimization 0.136 ms, Emission 1.729 ms, Total 2.105 ms
+ Execution Time: 893.415 ms
+(7 行)
+
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on hstore_inline_uncompressed  (cost=0.00..262500.00 rows=1000000 width=32) (actual time=1.753..847.941 rows=1000000 loops=1)
+ Planning Time: 0.030 ms
+ JIT:
+   Functions: 2
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.160 ms, Inlining 0.000 ms, Optimization 0.123 ms, Emission 1.619 ms, Total 1.902 ms
+ Execution Time: 888.953 ms
+(7 行)
+
+               ?column?               
+--------------------------------------
+ hstore_inline_uncompressed not found
+(1 行)
+
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on hstore_inline_uncompressed  (cost=0.00..262500.00 rows=1000000 width=32) (actual time=1.868..782.806 rows=1000000 loops=1)
+ Planning Time: 0.030 ms
+ JIT:
+   Functions: 2
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.174 ms, Inlining 0.000 ms, Optimization 0.132 ms, Emission 1.725 ms, Total 2.031 ms
+ Execution Time: 822.698 ms
+(7 行)
+
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on hstore_inline_uncompressed  (cost=0.00..262500.00 rows=1000000 width=32) (actual time=1.753..783.430 rows=1000000 loops=1)
+ Planning Time: 0.037 ms
+ JIT:
+   Functions: 2
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.172 ms, Inlining 0.000 ms, Optimization 0.124 ms, Emission 1.620 ms, Total 1.915 ms
+ Execution Time: 823.287 ms
+(7 行)
+
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on hstore_inline_uncompressed  (cost=0.00..262500.00 rows=1000000 width=32) (actual time=3.091..782.236 rows=1000000 loops=1)
+ Planning Time: 0.037 ms
+ JIT:
+   Functions: 2
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.160 ms, Inlining 0.000 ms, Optimization 0.144 ms, Emission 1.656 ms, Total 1.960 ms
+ Execution Time: 822.082 ms
+(7 行)
+
+                ?column?                
+----------------------------------------
+ hstore_inline_uncompressed count found
+(1 行)
+
+                                                                   QUERY PLAN                                                                   
+------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=265000.00..265000.01 rows=1 width=8) (actual time=875.179..875.181 rows=1 loops=1)
+   ->  Seq Scan on hstore_inline_uncompressed  (cost=0.00..260000.00 rows=1000000 width=2008) (actual time=0.189..671.521 rows=1000000 loops=1)
+ Planning Time: 0.295 ms
+ JIT:
+   Functions: 3
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.226 ms, Inlining 0.000 ms, Optimization 0.496 ms, Emission 2.395 ms, Total 3.118 ms
+ Execution Time: 875.480 ms
+(8 行)
+
+                                                                   QUERY PLAN                                                                   
+------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=265000.00..265000.01 rows=1 width=8) (actual time=880.209..880.210 rows=1 loops=1)
+   ->  Seq Scan on hstore_inline_uncompressed  (cost=0.00..260000.00 rows=1000000 width=2008) (actual time=0.014..674.473 rows=1000000 loops=1)
+ Planning Time: 0.046 ms
+ JIT:
+   Functions: 3
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.262 ms, Inlining 0.000 ms, Optimization 0.155 ms, Emission 2.393 ms, Total 2.810 ms
+ Execution Time: 880.530 ms
+(8 行)
+
+                                                                   QUERY PLAN                                                                   
+------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=265000.00..265000.01 rows=1 width=8) (actual time=878.488..878.489 rows=1 loops=1)
+   ->  Seq Scan on hstore_inline_uncompressed  (cost=0.00..260000.00 rows=1000000 width=2008) (actual time=0.025..673.013 rows=1000000 loops=1)
+ Planning Time: 0.044 ms
+ JIT:
+   Functions: 3
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.248 ms, Inlining 0.000 ms, Optimization 0.155 ms, Emission 2.406 ms, Total 2.809 ms
+ Execution Time: 878.793 ms
+(8 行)
+
+                  ?column?                  
+--------------------------------------------
+ hstore_inline_uncompressed count not found
+(1 行)
+
+                                                                   QUERY PLAN                                                                   
+------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=265000.00..265000.01 rows=1 width=8) (actual time=826.140..826.141 rows=1 loops=1)
+   ->  Seq Scan on hstore_inline_uncompressed  (cost=0.00..260000.00 rows=1000000 width=2008) (actual time=0.014..675.735 rows=1000000 loops=1)
+ Planning Time: 0.042 ms
+ JIT:
+   Functions: 3
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.247 ms, Inlining 0.000 ms, Optimization 0.140 ms, Emission 2.296 ms, Total 2.683 ms
+ Execution Time: 826.444 ms
+(8 行)
+
+                                                                   QUERY PLAN                                                                   
+------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=265000.00..265000.01 rows=1 width=8) (actual time=821.066..821.067 rows=1 loops=1)
+   ->  Seq Scan on hstore_inline_uncompressed  (cost=0.00..260000.00 rows=1000000 width=2008) (actual time=0.015..671.829 rows=1000000 loops=1)
+ Planning Time: 0.044 ms
+ JIT:
+   Functions: 3
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.224 ms, Inlining 0.000 ms, Optimization 0.138 ms, Emission 2.332 ms, Total 2.694 ms
+ Execution Time: 821.345 ms
+(8 行)
+
+                                                                   QUERY PLAN                                                                   
+------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=265000.00..265000.01 rows=1 width=8) (actual time=820.301..820.302 rows=1 loops=1)
+   ->  Seq Scan on hstore_inline_uncompressed  (cost=0.00..260000.00 rows=1000000 width=2008) (actual time=1.264..672.270 rows=1000000 loops=1)
+ Planning Time: 0.044 ms
+ JIT:
+   Functions: 3
+   Options: Inlining false, Optimization false, Expressions true, Deforming true
+   Timing: Generation 0.226 ms, Inlining 0.000 ms, Optimization 0.166 ms, Emission 2.378 ms, Total 2.770 ms
+ Execution Time: 820.583 ms
+(8 行)
+
+CREATE TABLE
+INSERT 0 1000000
+VACUUM
+            substr             | octet_length | pg_column_size | pg_column_size 
+-------------------------------+--------------+----------------+----------------
+ "k0k0k0k0k0k0k0k0k0k0k0k0k0k0 |         1942 |            200 |            224
+(1 行)
+
+            ?column?            
+--------------------------------
+ hstore_inline_compressed found
+(1 行)
+
+                                                              QUERY PLAN                                                              
+--------------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on hstore_inline_compressed  (cost=0.00..41072.00 rows=1000000 width=32) (actual time=0.010..1336.937 rows=1000000 loops=1)
+ Planning Time: 0.021 ms
+ Execution Time: 1373.683 ms
+(3 行)
+
+                                                              QUERY PLAN                                                              
+--------------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on hstore_inline_compressed  (cost=0.00..41072.00 rows=1000000 width=32) (actual time=0.014..1334.696 rows=1000000 loops=1)
+ Planning Time: 0.036 ms
+ Execution Time: 1371.436 ms
+(3 行)
+
+                                                              QUERY PLAN                                                              
+--------------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on hstore_inline_compressed  (cost=0.00..41072.00 rows=1000000 width=32) (actual time=0.014..1334.205 rows=1000000 loops=1)
+ Planning Time: 0.036 ms
+ Execution Time: 1370.937 ms
+(3 行)
+
+              ?column?              
+------------------------------------
+ hstore_inline_compressed not found
+(1 行)
+
+                                                              QUERY PLAN                                                              
+--------------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on hstore_inline_compressed  (cost=0.00..41072.00 rows=1000000 width=32) (actual time=0.010..1309.931 rows=1000000 loops=1)
+ Planning Time: 0.033 ms
+ Execution Time: 1345.783 ms
+(3 行)
+
+                                                              QUERY PLAN                                                              
+--------------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on hstore_inline_compressed  (cost=0.00..41072.00 rows=1000000 width=32) (actual time=0.010..1309.099 rows=1000000 loops=1)
+ Planning Time: 0.032 ms
+ Execution Time: 1344.880 ms
+(3 行)
+
+                                                              QUERY PLAN                                                              
+--------------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on hstore_inline_compressed  (cost=0.00..41072.00 rows=1000000 width=32) (actual time=0.012..1314.741 rows=1000000 loops=1)
+ Planning Time: 0.032 ms
+ Execution Time: 1350.626 ms
+(3 行)
+
+               ?column?               
+--------------------------------------
+ hstore_inline_compressed count found
+(1 行)
+
+                                                                QUERY PLAN                                                                 
+-------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=43572.00..43572.01 rows=1 width=8) (actual time=1371.036..1371.037 rows=1 loops=1)
+   ->  Seq Scan on hstore_inline_compressed  (cost=0.00..38572.00 rows=1000000 width=200) (actual time=0.007..89.621 rows=1000000 loops=1)
+ Planning Time: 0.036 ms
+ Execution Time: 1371.056 ms
+(4 行)
+
+                                                                QUERY PLAN                                                                 
+-------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=43572.00..43572.01 rows=1 width=8) (actual time=1377.803..1377.804 rows=1 loops=1)
+   ->  Seq Scan on hstore_inline_compressed  (cost=0.00..38572.00 rows=1000000 width=200) (actual time=0.006..90.805 rows=1000000 loops=1)
+ Planning Time: 0.043 ms
+ Execution Time: 1377.824 ms
+(4 行)
+
+                                                                QUERY PLAN                                                                 
+-------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=43572.00..43572.01 rows=1 width=8) (actual time=1375.455..1375.456 rows=1 loops=1)
+   ->  Seq Scan on hstore_inline_compressed  (cost=0.00..38572.00 rows=1000000 width=200) (actual time=0.006..90.148 rows=1000000 loops=1)
+ Planning Time: 0.041 ms
+ Execution Time: 1375.475 ms
+(4 行)
+
+                 ?column?                 
+------------------------------------------
+ hstore_inline_compressed count not found
+(1 行)
+
+                                                                QUERY PLAN                                                                 
+-------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=43572.00..43572.01 rows=1 width=8) (actual time=1339.260..1339.261 rows=1 loops=1)
+   ->  Seq Scan on hstore_inline_compressed  (cost=0.00..38572.00 rows=1000000 width=200) (actual time=0.006..90.553 rows=1000000 loops=1)
+ Planning Time: 0.037 ms
+ Execution Time: 1339.280 ms
+(4 行)
+
+                                                                QUERY PLAN                                                                 
+-------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=43572.00..43572.01 rows=1 width=8) (actual time=1338.539..1338.540 rows=1 loops=1)
+   ->  Seq Scan on hstore_inline_compressed  (cost=0.00..38572.00 rows=1000000 width=200) (actual time=0.006..90.435 rows=1000000 loops=1)
+ Planning Time: 0.046 ms
+ Execution Time: 1338.559 ms
+(4 行)
+
+                                                                QUERY PLAN                                                                 
+-------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=43572.00..43572.01 rows=1 width=8) (actual time=1335.750..1335.751 rows=1 loops=1)
+   ->  Seq Scan on hstore_inline_compressed  (cost=0.00..38572.00 rows=1000000 width=200) (actual time=0.006..90.650 rows=1000000 loops=1)
+ Planning Time: 0.042 ms
+ Execution Time: 1335.774 ms
+(4 行)
+
+CREATE TABLE
+INSERT 0 1000000
+VACUUM
+            substr             | octet_length | pg_column_size | pg_column_size 
+-------------------------------+--------------+----------------+----------------
+ "1aTa2ob42SQnxGptBZ8spAHA3XPH |         1942 |           2005 |           2033
+(1 行)
+
+            ?column?             
+---------------------------------
+ hstore_toast_uncompressed found
+(1 行)
+
+                                                              QUERY PLAN                                                               
+---------------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on hstore_toast_uncompressed  (cost=0.00..18870.00 rows=1000000 width=32) (actual time=0.027..5937.516 rows=1000000 loops=1)
+ Planning Time: 0.028 ms
+ Execution Time: 5999.824 ms
+(3 行)
+
+                                                              QUERY PLAN                                                               
+---------------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on hstore_toast_uncompressed  (cost=0.00..18870.00 rows=1000000 width=32) (actual time=0.046..4815.433 rows=1000000 loops=1)
+ Planning Time: 0.038 ms
+ Execution Time: 4873.185 ms
+(3 行)
+
+                                                              QUERY PLAN                                                               
+---------------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on hstore_toast_uncompressed  (cost=0.00..18870.00 rows=1000000 width=32) (actual time=0.038..4860.424 rows=1000000 loops=1)
+ Planning Time: 0.041 ms
+ Execution Time: 4918.989 ms
+(3 行)
+
+              ?column?               
+-------------------------------------
+ hstore_toast_uncompressed not found
+(1 行)
+
+                                                              QUERY PLAN                                                               
+---------------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on hstore_toast_uncompressed  (cost=0.00..18870.00 rows=1000000 width=32) (actual time=0.050..4766.572 rows=1000000 loops=1)
+ Planning Time: 0.031 ms
+ Execution Time: 4824.480 ms
+(3 行)
+
+                                                              QUERY PLAN                                                               
+---------------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on hstore_toast_uncompressed  (cost=0.00..18870.00 rows=1000000 width=32) (actual time=0.039..4776.609 rows=1000000 loops=1)
+ Planning Time: 0.033 ms
+ Execution Time: 4834.606 ms
+(3 行)
+
+                                                              QUERY PLAN                                                               
+---------------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on hstore_toast_uncompressed  (cost=0.00..18870.00 rows=1000000 width=32) (actual time=0.040..4771.893 rows=1000000 loops=1)
+ Planning Time: 0.030 ms
+ Execution Time: 4829.701 ms
+(3 行)
+
+               ?column?                
+---------------------------------------
+ hstore_toast_uncompressed count found
+(1 行)
+
+                                                                 QUERY PLAN                                                                 
+--------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=21370.00..21370.01 rows=1 width=8) (actual time=4866.686..4866.687 rows=1 loops=1)
+   ->  Seq Scan on hstore_toast_uncompressed  (cost=0.00..16370.00 rows=1000000 width=18) (actual time=0.012..113.305 rows=1000000 loops=1)
+ Planning Time: 0.047 ms
+ Execution Time: 4866.707 ms
+(4 行)
+
+                                                                 QUERY PLAN                                                                 
+--------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=21370.00..21370.01 rows=1 width=8) (actual time=4841.670..4841.671 rows=1 loops=1)
+   ->  Seq Scan on hstore_toast_uncompressed  (cost=0.00..16370.00 rows=1000000 width=18) (actual time=0.014..113.153 rows=1000000 loops=1)
+ Planning Time: 0.066 ms
+ Execution Time: 4841.692 ms
+(4 行)
+
+                                                                 QUERY PLAN                                                                 
+--------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=21370.00..21370.01 rows=1 width=8) (actual time=4850.935..4850.936 rows=1 loops=1)
+   ->  Seq Scan on hstore_toast_uncompressed  (cost=0.00..16370.00 rows=1000000 width=18) (actual time=0.017..114.097 rows=1000000 loops=1)
+ Planning Time: 0.043 ms
+ Execution Time: 4850.955 ms
+(4 行)
+
+                 ?column?                  
+-------------------------------------------
+ hstore_toast_uncompressed count not found
+(1 行)
+
+                                                                 QUERY PLAN                                                                 
+--------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=21370.00..21370.01 rows=1 width=8) (actual time=4802.209..4802.210 rows=1 loops=1)
+   ->  Seq Scan on hstore_toast_uncompressed  (cost=0.00..16370.00 rows=1000000 width=18) (actual time=0.016..114.448 rows=1000000 loops=1)
+ Planning Time: 0.045 ms
+ Execution Time: 4802.233 ms
+(4 行)
+
+                                                                 QUERY PLAN                                                                 
+--------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=21370.00..21370.01 rows=1 width=8) (actual time=4778.818..4778.819 rows=1 loops=1)
+   ->  Seq Scan on hstore_toast_uncompressed  (cost=0.00..16370.00 rows=1000000 width=18) (actual time=0.017..116.346 rows=1000000 loops=1)
+ Planning Time: 0.044 ms
+ Execution Time: 4778.846 ms
+(4 行)
+
+                                                                 QUERY PLAN                                                                 
+--------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=21370.00..21370.01 rows=1 width=8) (actual time=4786.536..4786.537 rows=1 loops=1)
+   ->  Seq Scan on hstore_toast_uncompressed  (cost=0.00..16370.00 rows=1000000 width=18) (actual time=0.015..114.442 rows=1000000 loops=1)
+ Planning Time: 0.048 ms
+ Execution Time: 4786.558 ms
+(4 行)
+
+CREATE TABLE
+INSERT 0 1000000
+VACUUM
+            substr             | octet_length | pg_column_size | pg_column_size 
+-------------------------------+--------------+----------------+----------------
+ "k0k0k0k0k0k0k0k0k0k0k0k0k0k0 |         2628 |           2006 |           2034
+(1 行)
+
+           ?column?            
+-------------------------------
+ hstore_toast_compressed found
+(1 行)
+
+                                                              QUERY PLAN                                                              
+--------------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on hstore_toast_compressed  (cost=0.00..18870.00 rows=1000000 width=32) (actual time=0.034..15707.618 rows=1000000 loops=1)
+ Planning Time: 0.028 ms
+ Execution Time: 15774.278 ms
+(3 行)
+
+                                                             QUERY PLAN                                                              
+-------------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on hstore_toast_compressed  (cost=0.00..18870.00 rows=1000000 width=32) (actual time=1.196..9422.942 rows=1000000 loops=1)
+ Planning Time: 0.040 ms
+ Execution Time: 9481.322 ms
+(3 行)
+
+                                                              QUERY PLAN                                                              
+--------------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on hstore_toast_compressed  (cost=0.00..18870.00 rows=1000000 width=32) (actual time=0.056..10288.683 rows=1000000 loops=1)
+ Planning Time: 0.042 ms
+ Execution Time: 10348.489 ms
+(3 行)
+
+             ?column?              
+-----------------------------------
+ hstore_toast_compressed not found
+(1 行)
+
+                                                             QUERY PLAN                                                              
+-------------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on hstore_toast_compressed  (cost=0.00..18870.00 rows=1000000 width=32) (actual time=1.518..9450.857 rows=1000000 loops=1)
+ Planning Time: 0.028 ms
+ Execution Time: 9509.036 ms
+(3 行)
+
+                                                              QUERY PLAN                                                              
+--------------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on hstore_toast_compressed  (cost=0.00..18870.00 rows=1000000 width=32) (actual time=0.042..10097.568 rows=1000000 loops=1)
+ Planning Time: 0.033 ms
+ Execution Time: 10156.166 ms
+(3 行)
+
+                                                             QUERY PLAN                                                              
+-------------------------------------------------------------------------------------------------------------------------------------
+ Seq Scan on hstore_toast_compressed  (cost=0.00..18870.00 rows=1000000 width=32) (actual time=1.139..9852.628 rows=1000000 loops=1)
+ Planning Time: 0.034 ms
+ Execution Time: 9911.108 ms
+(3 行)
+
+              ?column?               
+-------------------------------------
+ hstore_toast_compressed count found
+(1 行)
+
+                                                                QUERY PLAN                                                                
+------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=21370.00..21370.01 rows=1 width=8) (actual time=10237.258..10237.259 rows=1 loops=1)
+   ->  Seq Scan on hstore_toast_compressed  (cost=0.00..16370.00 rows=1000000 width=18) (actual time=0.016..139.936 rows=1000000 loops=1)
+ Planning Time: 0.045 ms
+ Execution Time: 10237.282 ms
+(4 行)
+
+                                                                QUERY PLAN                                                                
+------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=21370.00..21370.01 rows=1 width=8) (actual time=9502.514..9502.515 rows=1 loops=1)
+   ->  Seq Scan on hstore_toast_compressed  (cost=0.00..16370.00 rows=1000000 width=18) (actual time=0.328..134.670 rows=1000000 loops=1)
+ Planning Time: 0.043 ms
+ Execution Time: 9502.535 ms
+(4 行)
+
+                                                                QUERY PLAN                                                                
+------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=21370.00..21370.01 rows=1 width=8) (actual time=10212.362..10212.363 rows=1 loops=1)
+   ->  Seq Scan on hstore_toast_compressed  (cost=0.00..16370.00 rows=1000000 width=18) (actual time=0.014..140.691 rows=1000000 loops=1)
+ Planning Time: 0.043 ms
+ Execution Time: 10212.382 ms
+(4 行)
+
+                ?column?                 
+-----------------------------------------
+ hstore_toast_compressed count not found
+(1 行)
+
+                                                                QUERY PLAN                                                                
+------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=21370.00..21370.01 rows=1 width=8) (actual time=9434.105..9434.106 rows=1 loops=1)
+   ->  Seq Scan on hstore_toast_compressed  (cost=0.00..16370.00 rows=1000000 width=18) (actual time=0.327..135.249 rows=1000000 loops=1)
+ Planning Time: 0.045 ms
+ Execution Time: 9434.125 ms
+(4 行)
+
+                                                                QUERY PLAN                                                                
+------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=21370.00..21370.01 rows=1 width=8) (actual time=10123.720..10123.721 rows=1 loops=1)
+   ->  Seq Scan on hstore_toast_compressed  (cost=0.00..16370.00 rows=1000000 width=18) (actual time=0.017..134.947 rows=1000000 loops=1)
+ Planning Time: 0.043 ms
+ Execution Time: 10123.747 ms
+(4 行)
+
+                                                                QUERY PLAN                                                                
+------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=21370.00..21370.01 rows=1 width=8) (actual time=9409.021..9409.022 rows=1 loops=1)
+   ->  Seq Scan on hstore_toast_compressed  (cost=0.00..16370.00 rows=1000000 width=18) (actual time=0.378..133.554 rows=1000000 loops=1)
+ Planning Time: 0.053 ms
+ Execution Time: 9409.049 ms
+(4 行)
+
+   oid    |          relname           | reltoastrelid | relpages | reltuples | toast_pages | toast_tuples | total_relation_size | total_relation_size_pretty 
+----------+----------------------------+---------------+----------+-----------+-------------+--------------+---------------------+----------------------------
+ 14125911 | hstore_inline_compressed   |      14125914 |    28572 |     1e+06 |           0 |            0 |           234160128 | 223 MB
+ 14125906 | hstore_inline_uncompressed |      14125909 |   250000 |     1e+06 |           0 |            0 |          2048598016 | 1954 MB
+ 15125921 | hstore_toast_compressed    |      15125924 |     6370 |     1e+06 |      333334 |        2e+06 |          2828615680 | 2698 MB
+ 14125916 | hstore_toast_uncompressed  |      14125919 |     6370 |     1e+06 |      333334 |        2e+06 |          2828615680 | 2698 MB
+(4 行)
+
